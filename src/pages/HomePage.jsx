@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/home.css';
+import SEO from '../components/SEO';
 import Hero from '../components/Home/Hero';
 import ScaleSection from '../components/Home/ScaleSection';
 import StarSection from '../components/Home/StarSection';
@@ -18,6 +19,10 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="The Starry Path | Resilience, Life Skills & Literacy for Children"
+        description="Empower your child with The Starry Path. We combine child psychology and education to build resilience, emotional intelligence, and science-based literacy skills in children aged 5-12."
+      />
       <Hero />
       <ScaleSection />
       <StarSection />

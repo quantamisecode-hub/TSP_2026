@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailConfig';
+import Snackbar from '../components/Snackbar';
+import SEO from '../components/SEO';
 import '../styles/inner-stars.css';
 
 // Asset Import
@@ -20,6 +22,8 @@ import InnerStarsTailSvg from '../assets/Story/Inner Stars.svg';
 
 const InnerStarsPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
+    const [isLoading, setIsLoading] = useState(false);
 
     const slides = [
         {
@@ -105,21 +109,35 @@ const InnerStarsPage = () => {
         
         const form = e.target;
 
+        const programName = form.program.options[form.program.selectedIndex].text;
+        const parentName = form.parent_name.value;
+        const childName = form.child_name.value;
+
         const templateParams = {
-            child_name: form.child_name.value,
+            child_name: childName,
             child_age: form.child_age.value,
-            parent_name: form.parent_name.value,
+            parent_name: parentName,
             parent_email: form.parent_email.value,
             parent_phone: form.parent_phone.value,
-            program: form.program.value,
+            program: programName,
+            preferred_time: "",
+            subject: `Inner Stars Enrollment - ${childName}`,
+            heading: "Inner Stars Enrollment",
+            subheading: "A new enrollment request has been received.",
+            auto_reply_message: `Our team will carefully review your request for the ${programName} program and will reach out to you soon to discuss the next steps for enrollment.`,
+            message: "New enrollment request for Inner Stars.",
+            logo_url: 'https://the-starry-path.vercel.app/Logo.png',
             // Aliases
-            user_name: form.parent_name.value,
+            user_name: parentName,
             user_email: form.parent_email.value,
             reply_to: form.parent_email.value,
-            to_email: form.parent_email.value,
-            from_name: form.parent_name.value
+            to_email: EMAILJS_CONFIG.ADMIN_EMAIL,
+            from_name: parentName
         };
 
+        setIsLoading(true);
+
+        // Send email to Admin
         emailjs.send(
             EMAILJS_CONFIG.SERVICE_ID,
             EMAILJS_CONFIG.TEMPLATE_ID,
@@ -127,17 +145,30 @@ const InnerStarsPage = () => {
             EMAILJS_CONFIG.PUBLIC_KEY
         ).then((result) => {
             console.log('Email successfully sent!', result.text);
-            alert('Thank you! Your enrollment request has been sent successfully.');
+            setIsLoading(false);
+            setSnackbar({
+                show: true,
+                message: 'Thank you! Your enrollment request has been sent successfully.',
+                type: 'success'
+            });
+            form.reset();
         }, (error) => {
             console.error('Email failed to send:', error);
-            alert('Something went wrong. Please try again later.');
+            setIsLoading(false);
+            setSnackbar({
+                show: true,
+                message: 'Something went wrong. Please try again later.',
+                type: 'error'
+            });
         });
-
-        form.reset();
     };
 
     return (
         <div className="inner-stars-page">
+            <SEO 
+                title="Building Resilience & Life Skills for Children | Inner Stars"
+                description="Strengthen your child's emotional intelligence, courage, and resilience with the Inner Stars program. Evidence-based life skills coaching for children aged 5-12."
+            />
             <section className="inner-stars-hero-section">
                 <div className="inner-stars-card" data-aos="fade-up">
                     <div className="card-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
@@ -571,9 +602,20 @@ const InnerStarsPage = () => {
                         <div className="text-center pt-8">
                             <button
                                 type="submit"
-                                className="btn-join inline-block font-bold uppercase tracking-widest px-12 py-4"
+                                disabled={isLoading}
+                                className={`btn-join inline-block font-bold uppercase tracking-widest px-12 py-4 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
                             >
-                                ENROL NOW
+                                {isLoading ? (
+                                    <div className="flex items-center gap-3">
+                                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        SENDING...
+                                    </div>
+                                ) : (
+                                    'ENROL NOW'
+                                )}
                             </button>
                         </div>
                     </form>
@@ -610,6 +652,13 @@ const InnerStarsPage = () => {
                     </div>
                 </div>
             </section>
+
+            <Snackbar 
+                show={snackbar.show} 
+                message={snackbar.message} 
+                type={snackbar.type} 
+                onClose={() => setSnackbar({ ...snackbar, show: false })} 
+            />
         </div>
     );
 };

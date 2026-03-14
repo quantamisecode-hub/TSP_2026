@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/programs.css';
+import SEO from '../components/SEO';
 
 // Import Components
 import ProgramsHero from '../components/Programs/ProgramsHero';
@@ -35,6 +36,10 @@ const ProgramsPage = () => {
 
     return (
         <div className="programs-page">
+            <SEO 
+                title="Children's Resilience & Literacy Programs | The Starry Path"
+                description="Explore our specialized programs for kids. From 'Inner Stars' for resilience and life skills to 'Learning Stars' for science-based literacy support and reading success."
+            />
             <ProgramsHero />
             <div id="inner-stars">
                 <InnerStarsProgram />

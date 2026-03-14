@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/story.css';
+import SEO from '../components/SEO';
 
 // SVGs Imports
 import BannerTop from '../assets/Story/BAnner.svg';
@@ -22,6 +23,10 @@ const StoryPage = () => {
 
     return (
         <div className="story-page">
+            <SEO 
+                title="Our Purpose & Story | Building Character for Life | The Starry Path"
+                description="Discover why The Starry Path was created. Founded by a teacher and psychologist to bridge the gap between education and emotional intelligence for every child."
+            />
             <section className="story-section pt-0" data-aos="fade-in">
                 <img src={BannerTop} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
                 <div className="story-hero-text">
