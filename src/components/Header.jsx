@@ -9,6 +9,24 @@ const Header = () => {
     const location = useLocation();
     const isLearningStars = location.pathname === '/learning-stars';
 
+    const openInnerStarsCalendly = (e) => {
+        e.preventDefault();
+        if (window.Calendly) {
+            window.Calendly.showPopupWidget('https://calendly.com/hello-thestarrypath-mglz/inner-stars-parent-call');
+        }
+        setIsMenuOpen(false);
+        setMobileBookNowOpen(false);
+    };
+
+    const openLearningStarsCalendly = (e) => {
+        e.preventDefault();
+        if (window.Calendly) {
+            window.Calendly.showPopupWidget('https://calendly.com/hello-thestarrypath-mglz/learning-stars-parent-call');
+        }
+        setIsMenuOpen(false);
+        setMobileBookNowOpen(false);
+    };
+
     return (
         <header className={`header ${isLearningStars ? 'header-learning-stars' : ''}`}>
             <div className="header-container">
@@ -52,8 +70,8 @@ const Header = () => {
                                 <span className={`inline-block w-2 h-2 border-r-2 border-b-2 border-white mb-1 transition-transform ${mobileBookNowOpen ? '-rotate-[135deg]' : 'rotate-45'}`}></span>
                             </button>
                             <div className={`dropdown-menu mx-auto ${mobileBookNowOpen ? 'mobile-open' : ''}`}>
-                                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="dropdown-item inner-stars-btn w-full text-center" onClick={() => setIsMenuOpen(false)}>Inner Stars</a>
-                                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="dropdown-item learning-stars-btn w-full text-center" onClick={() => setIsMenuOpen(false)}>Learning Stars</a>
+                                <a href="#" className="dropdown-item inner-stars-btn w-full text-center" onClick={openInnerStarsCalendly}>Inner Stars</a>
+                                <a href="#" className="dropdown-item learning-stars-btn w-full text-center" onClick={openLearningStarsCalendly}>Learning Stars</a>
                             </div>
                         </li>
                     </ul>
@@ -64,12 +82,13 @@ const Header = () => {
                         Book now
                     </a>
                     <div className="dropdown-menu !left-auto !right-[-20px] !transform-none opacity-0 invisible group-hover:!opacity-100 group-hover:!visible group-hover:!-translate-y-1 transition-all duration-300 mt-4">
-                        <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="dropdown-item inner-stars-btn">Inner Stars</a>
-                        <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="dropdown-item learning-stars-btn">Learning Stars</a>
+                        <a href="#" className="dropdown-item inner-stars-btn" onClick={openInnerStarsCalendly}>Inner Stars</a>
+                        <a href="#" className="dropdown-item learning-stars-btn" onClick={openLearningStarsCalendly}>Learning Stars</a>
                     </div>
                 </div>
             </div>
         </header>
+
     );
 };
 
