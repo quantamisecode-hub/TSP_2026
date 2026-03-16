@@ -27,10 +27,12 @@ import TutoringSvg from '../assets/images/Learning Star/Tutoring.svg';
 import ClaritySvg from '../assets/images/Learning Star/Clarity.svg';
 import ReadingRopeSvg from '../assets/images/Learning Star/Reading Rope.svg';
 import BigSixSvg from '../assets/images/Learning Star/This Big Six.svg';
+import InsideProgramPhoto from '../assets/images/Learning Star/Image_TSP.jpeg';
 
 const LearningStarsPage = () => {
     const [openFaq, setOpenFaq] = React.useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [insideSlide, setInsideSlide] = useState(0);
     const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
     const [isLoading, setIsLoading] = useState(false);
 
@@ -43,7 +45,14 @@ const LearningStarsPage = () => {
             setCurrentSlide((prev) => (prev + 1) % researchSlides.length);
         }, 6000);
 
-        return () => clearInterval(timer);
+        const insideTimer = setInterval(() => {
+            setInsideSlide((prev) => (prev + 1) % 2);
+        }, 4000);
+
+        return () => {
+            clearInterval(timer);
+            clearInterval(insideTimer);
+        };
     }, []);
 
     const handleAssessmentSubmit = (e) => {
@@ -269,9 +278,9 @@ const LearningStarsPage = () => {
 
 
             {/* What Children Learn Section */}
-            <section className="ls-learn-section pt-0 pb-0 bg-[var(--color-dark-navy)]">
+            <section className="ls-learn-section pt-12 pb-0 lg:pt-0 lg:pb-0 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1200px] mx-auto px-6">
-                    <div className="text-center mb-16" data-aos="fade-up">
+                    <div className="text-center mb-10 lg:mb-16" data-aos="fade-up">
                         <h2 className="ls-learn-title">WHAT CHILDREN LEARN</h2>
                         <p className="ls-learn-subtitle mt-4 text-white opacity-90 text-lg md:text-xl font-body">
                             Build the foundation skills needed for reading and writing
@@ -305,8 +314,8 @@ const LearningStarsPage = () => {
                         ))}
                     </div>
 
-                    <div className="text-center mt-8" data-aos="fade-up">
-                        <p className="text-white opacity-80 text-lg md:text-xl font-light italic font-body">
+                    <div className="text-center mt-6 lg:mt-8" data-aos="fade-up">
+                        <p className="text-white opacity-80 text-base md:text-xl font-light italic font-body">
                             Together, these skills unlock learning across every subject at school.
                         </p>
                     </div>
@@ -324,16 +333,25 @@ const LearningStarsPage = () => {
                             <img src={InsideProgramSvg} alt="Inside the Program" />
                         </div>
 
-                        {/* Right: Kids Asset (Notebook) */}
+                        {/* Right: Kids Asset (Carousel) */}
                         <div className="ls-inside-asset ls-kids-asset" data-aos="fade-left">
-                            <img src={GlumKidsSvg} alt="Six Glum Kids" />
+                            <img 
+                                src={GlumKidsSvg} 
+                                alt="Six Glum Kids" 
+                                className={`ls-carousel-img ${insideSlide === 0 ? 'active' : ''}`}
+                            />
+                            <img 
+                                src={InsideProgramPhoto} 
+                                alt="Magnetic Letters Activity" 
+                                className={`ls-carousel-img ls-photo-asset ${insideSlide === 1 ? 'active' : ''}`}
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Intentional Teaching Approach Section */}
-            <section className="ls-intentional-section bg-[var(--color-dark-navy)]">
+            <section className="ls-intentional-section pt-4 lg:pt-0 pb-12 lg:pb-24 bg-[var(--color-dark-navy)]">
                 <div className="ls-intentional-wrapper px-6">
                     <h2 className="ls-intentional-title mb-0" data-aos="fade-up">
                         AN INTENTIONAL TEACHING APPROACH

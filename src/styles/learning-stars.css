@@ -341,9 +341,8 @@
     padding-left: 15%;
     /* Shifted little right as requested */
     position: relative;
-    top: 200px;
-    /* Moved little down as requested */
-    /* Moves the text down visually */
+    top: 220px;
+    /* Moved down as requested */
     z-index: 10;
     /* Keeps it above the SVG */
 }
@@ -389,12 +388,32 @@
 
 .ls-kids-asset {
     width: 530px;
-    /* Subtly smaller as requested */
-    line-height: 0;
+    display: grid;
+    grid-template-areas: "overlay";
+    align-items: center;
+    justify-content: center;
     position: relative;
     left: -160px;
-    /* Slightly adjusted to center after size change */
     top: -100px;
+}
+
+.ls-carousel-img {
+    grid-area: overlay;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.ls-carousel-img.active {
+    opacity: 1;
+}
+
+.ls-photo-asset {
+    width: 80% !important;
+    justify-self: center;
+    border-radius: 20px;
 }
 
 .ls-inside-asset img {
@@ -616,6 +635,17 @@
         display: none;
     }
 
+    .ls-kids-asset {
+        width: 100%;
+        max-width: 320px;
+        height: 300px;
+        left: 0;
+        top: 0;
+        order: 2;
+        display: grid;
+        justify-content: center;
+    }
+
     .ls-inside-title {
         text-align: center;
         padding-left: 0;
@@ -652,18 +682,13 @@
         transform-origin: center;
     }
 
-    .ls-kids-asset {
-        width: 100%;
-        max-width: 320px;
-        left: 0;
-        top: 0;
-        order: 2;
-    }
+
 
     /* Intentional Teaching Approach Mobile Fixes */
     .ls-intentional-section {
-        margin-top: 0rem;
-        padding-bottom: 2rem;
+        margin-top: 0; /* Removed negative margin to fix overlap */
+        padding-top: 2rem; /* Added padding for clean spacing */
+        padding-bottom: 3rem; /* Added bottom margin to separate from research section */
     }
 
     .ls-intentional-wrapper {
@@ -671,34 +696,32 @@
     }
 
     .ls-intentional-title {
-        font-size: 1.7rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
         line-height: 1.2;
-        max-width: 360px;
-        /* balanced to allow 2 lines naturally with more padding space */
+        max-width: 320px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .ls-intentional-asset-container {
-        margin-top: -3rem;
+        margin-top: 0; /* Reset desktop pull-up */
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-bottom: 1rem;
     }
 
     .ls-intentional-asset {
-        max-width: 100%;
-        /* Wider on mobile */
+        max-width: 90%;
         height: auto;
-        transform: scale(1.3);
-        /* Made it 'little big' as requested */
+        transform: scale(1.1); /* Reduced scale */
     }
 
     .ls-intentional-info-box {
-        margin: 0.2rem auto 0;
+        margin: -1rem auto 0;
         padding: 1rem 1.5rem;
-        max-width: 85%;
+        max-width: 90%;
         border-radius: 20px;
     }
 
@@ -725,18 +748,20 @@
     }
 
     .ls-research-slide {
-        position: relative !important;
-        opacity: 1 !important;
+        position: relative;
         display: none;
     }
 
     .ls-research-slide.opacity-100 {
         display: block;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .ls-research-container {
         flex-direction: column;
         height: auto;
+        gap: 3rem; /* Increased gap to prevent touching */
     }
 
     .ls-navy-panel,
@@ -744,7 +769,7 @@
     .ls-white-panel,
     .ls-yellow-panel {
         border-radius: 20px;
-        margin: 10px 0;
+        margin: 0; /* Margin handled by container gap */
         border: 2px solid #5E3FB2 !important;
     }
 
@@ -798,7 +823,7 @@
     }
 
     .ls-creator-content {
-        padding: 2rem !important;
+        padding: 2.5rem 1.5rem !important;
     }
 
     .ls-diff-row {
@@ -901,6 +926,15 @@
 }
 
 @media (max-width: 768px) {
+    .ls-research-section {
+        padding-bottom: 6rem !important; /* Increased space at bottom of research */
+        padding-top: 2rem !important; /* Added space at top to prevent touching previous section */
+    }
+
+    .ls-creator-section {
+        padding-top: 4rem !important; /* Increased space at top of creator */
+    }
+
     .ls-faq-container {
         padding: 2.5rem 1.5rem;
         border-radius: 40px;
