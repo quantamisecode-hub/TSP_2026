@@ -16,6 +16,9 @@ import CalmConnectLogo from '../assets/Story/Calm Connect Therapy.svg';
 
 
 const StoryPage = () => {
+    // Force the inbuilt SVG animation to restart by adding a timestamp
+    const bannerUrl = `${BannerTop}?t=${Date.now()}`;
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         window.scrollTo(0, 0);
@@ -23,12 +26,12 @@ const StoryPage = () => {
 
     return (
         <div className="story-page">
-            <SEO 
+            <SEO
                 title="Our Purpose & Story | Building Character for Life | The Starry Path"
                 description="Discover why The Starry Path was created. Founded by a teacher and psychologist to bridge the gap between education and emotional intelligence for every child."
             />
             <section className="story-section pt-0" data-aos="fade-in">
-                <img src={BannerTop} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
+                <img src={bannerUrl} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
                 <div className="story-hero-text">
                     <h4>A child's inner world is made of many pieces.</h4>
                     <p>Understanding how those pieces work together builds habits of mind and character.</p>
