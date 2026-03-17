@@ -470,6 +470,21 @@
     height: 100%;
     z-index: 2;
     pointer-events: none;
+    /* Fade text smoothly at both edges so letters never get hard-clipped */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
 }
 
 .scrolling-wave-text,
