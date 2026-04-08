@@ -49,7 +49,15 @@ const Header = () => {
                     <ul>
                         <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
                         <li className="nav-item-dropdown group">
-                            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
+                            <div className="flex items-center justify-between w-full md:w-auto">
+                                <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
+                                <button
+                                    className="md:hidden ml-4 p-2"
+                                    onClick={(e) => { e.preventDefault(); setMobileProgramsOpen(!mobileProgramsOpen); }}
+                                >
+                                    <span className={`inline-block w-2.5 h-2.5 border-r-2 border-b-2 border-[var(--color-deep-purple)] transition-transform duration-300 ${mobileProgramsOpen ? '-rotate-[135deg]' : 'rotate-45'}`}></span>
+                                </button>
+                            </div>
                             <div className={`dropdown-menu ${mobileProgramsOpen ? 'mobile-open' : ''}`}>
                                 <Link to="/programs" className="dropdown-item overview-btn" onClick={() => setIsMenuOpen(false)}>Overview</Link>
                                 <Link to="/inner-stars" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>

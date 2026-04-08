@@ -27,7 +27,7 @@ import TutoringSvg from '../assets/images/Learning Star/Tutoring.svg';
 import ClaritySvg from '../assets/images/Learning Star/Clarity.svg';
 import ReadingRopeSvg from '../assets/images/Learning Star/Reading Rope.svg';
 import BigSixSvg from '../assets/images/Learning Star/This Big Six.svg';
-import InsideProgramPhoto from '../assets/images/Learning Star/Image_TSP.jpeg';
+import InsideProgramPhoto from '../assets/images/Learning Star/Image_TSP.png';
 
 const LearningStarsPage = () => {
     const [openFaq, setOpenFaq] = React.useState(0);
@@ -222,7 +222,7 @@ const LearningStarsPage = () => {
             {/* Hero Section */}
             <section className="learning-stars-hero-section">
                 <div className="learning-stars-hero-card" data-aos="fade-up">
-                    <div className="ls-hero-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+                    <div className="ls-hero-content flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-16">
                         <div className="ls-hero-text w-full lg:w-1/2 text-center lg:text-left lg:pl-24" data-aos="fade-right" data-aos-delay="200">
                             <h1 className="ls-title">LEARNING STARS</h1>
                             <h2 className="ls-subtitle">Structured literacy support</h2>
@@ -340,7 +340,7 @@ const LearningStarsPage = () => {
                             <img
                                 src={GlumKidsSvg}
                                 alt="Six Glum Kids"
-                                className={`ls-carousel-img ${insideSlide === 0 ? 'active' : ''}`}
+                                className={`ls-carousel-img ls-kids-illustration-asset ${insideSlide === 0 ? 'active' : ''}`}
                             />
                             <img
                                 src={InsideProgramPhoto}

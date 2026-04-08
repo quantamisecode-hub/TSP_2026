@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const StarKeepersSection = () => {
     return (
-        <section className="bg-[var(--color-dark-navy)] text-white py-12 md:py-16 px-4 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] my-8 md:my-16 relative overflow-visible shadow-2xl">
+        <section className="bg-[var(--color-dark-navy)] text-white py-12 md:py-16 px-4 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] mt-20 mb-12 md:my-24 relative overflow-visible shadow-2xl">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
 
                 {/* Left: Umbrella Image Container */}
@@ -60,10 +60,10 @@ const StarKeepersSection = () => {
 
                 {/* Right: Text Content */}
                 <div className="flex-1 text-center md:text-left md:pl-8 text-white" data-aos="fade-left">
-                    <h2 className="font-[var(--font-heading)] text-3xl md:text-4xl mb-4 md:mb-6 uppercase leading-tight font-bold">
+                    <h2 className="font-[var(--font-heading)] text-2xl md:text-4xl mb-4 md:mb-6 uppercase leading-tight font-bold whitespace-nowrap md:whitespace-normal">
                         MEET THE STAR KEEPERS
                     </h2>
-                    <p className="font-[var(--font-accent)] text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0 opacity-90">
+                    <p className="font-[var(--font-accent)] text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0 opacity-90 text-justify md:text-left">
                         Created by an experienced teacher with a background in psychology, The Starry Path blends child development research with intentional, engaging learning.
                     </p>
                 </div>

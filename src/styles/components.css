@@ -39,7 +39,7 @@
     color: var(--color-deep-purple);
     text-decoration: none;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: var(--font-accent);
     text-transform: capitalize;
     transition: color 0.3s ease;
@@ -112,9 +112,45 @@
     align-items: center;
     justify-content: center;
     color: white !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     font-weight: 700 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    /* For shimmer */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Shimmer Glass Effect for Buttons */
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 45%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 55%,
+            transparent 100%);
+    transform: rotate(45deg);
+    transition: 0.8s;
+    pointer-events: none;
+    animation: buttonShimmer 3s infinite linear;
+}
+
+@keyframes buttonShimmer {
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
 }
 
 .dropdown-item::before {
@@ -123,15 +159,18 @@
 }
 
 .overview-btn {
-    background-color: var(--color-lime-green) !important;
+    background-color: rgba(176, 210, 54, 0.85) !important;
+    /* var(--color-lime-green) with glass alpha */
 }
 
 .inner-stars-btn {
-    background-color: var(--color-orange) !important;
+    background-color: rgba(240, 76, 35, 0.85) !important;
+    /* var(--color-red-orange) with glass alpha */
 }
 
 .learning-stars-btn {
-    background-color: var(--color-dark-navy) !important;
+    background-color: rgba(18, 47, 82, 0.85) !important;
+    /* var(--color-dark-navy) with glass alpha */
 }
 
 .dropdown-item:hover {
@@ -301,8 +340,9 @@
     .dropdown-item {
         padding: 0.5rem 1rem !important;
         font-size: 1.1rem !important;
-        text-align: left;
-        width: fit-content;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
     }
 
     .nav-item-dropdown:hover .dropdown-menu {
@@ -473,20 +513,16 @@
     z-index: 2;
     pointer-events: none;
     /* Fade text smoothly at both edges so letters never get hard-clipped */
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 8%,
-        black 92%,
-        transparent 100%
-    );
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 8%,
-        black 92%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
 }
 
 .scrolling-wave-text,
@@ -631,7 +667,7 @@
     }
 
     .footer-acknowledgment {
-        text-align: center;
+        text-align: justify;
     }
 
     .programs-page {

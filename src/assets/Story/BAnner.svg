@@ -82,18 +82,18 @@
         100% { opacity: 1; transform: translate(0, 0) scale(1); }
       }
       .p-piece { opacity: 0; animation: puzzleJoin 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      .resilience { --dx: -150px; --dy: -100px; animation-delay: 1.2s; }
-      .courage { --dx: -150px; --dy: 0px; animation-delay: 1.4s; }
-      .perseverance { --dx: -150px; --dy: 100px; animation-delay: 1.6s; }
-      .habits { opacity: 0; animation: habitsPop 0.8s ease-out 2.2s forwards; transform-origin: 642px 354px; }
-      .kindness { --dx: 150px; --dy: -100px; animation-delay: 1.3s; }
-      .gratitude { --dx: 150px; --dy: 0px; animation-delay: 1.5s; }
-      .integrity { --dx: 150px; --dy: 100px; animation-delay: 1.7s; }
+      .resilience { --dx: -150px; --dy: -100px; animation-delay: 1.7s; }
+      .courage { --dx: -150px; --dy: 0px; animation-delay: 1.9s; }
+      .perseverance { --dx: -150px; --dy: 100px; animation-delay: 2.1s; }
+      .habits { opacity: 0; animation: habitsPop 0.8s ease-out 2.7s forwards; transform-origin: 642px 354px; }
+      .kindness { --dx: 150px; --dy: -100px; animation-delay: 1.8s; }
+      .gratitude { --dx: 150px; --dy: 0px; animation-delay: 2.0s; }
+      .integrity { --dx: 150px; --dy: 100px; animation-delay: 2.2s; }
       @keyframes habitsPop {
         0% { opacity: 0; transform: scale(0.5); }
         100% { opacity: 1; transform: scale(1); }
       }
-      .bg-fade { opacity: 0; animation: fadeIn 1.5s forwards 2.4s; }
+      .bg-fade { opacity: 0; animation: fadeIn 1.5s forwards 2.9s; }
       @keyframes fadeIn { to { opacity: 1; } }
     </style>
   </defs>

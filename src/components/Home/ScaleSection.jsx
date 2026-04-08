@@ -26,7 +26,7 @@ const ScaleSection = () => {
 
     return (
         <section className="scale-section py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center overflow-hidden">
-            <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-xl md:text-[2.75rem] mb-2 md:mb-4 uppercase tracking-wide px-2 w-full font-bold" data-aos="fade-up">
+            <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-2 md:mb-4 uppercase tracking-wide px-2 w-full font-bold" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
 

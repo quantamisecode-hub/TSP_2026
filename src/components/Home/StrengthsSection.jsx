@@ -51,7 +51,7 @@ const StrengthsSection = () => {
 
     return (
         <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center">
-            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight font-bold" data-aos="fade-up">
+            <h2 className="text-2xl md:text-4xl text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight font-bold" data-aos="fade-up">
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
             <p className="text-base md:text-lg mb-8 md:mb-12 font-[var(--font-accent)]" style={{ color: '#636466' }} data-aos="fade-up" data-aos-delay="100">

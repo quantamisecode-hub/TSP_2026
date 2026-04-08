@@ -156,6 +156,10 @@
         gap: 2rem;
     }
 
+    .star-bullet-list {
+        padding-left: 1.5rem;
+    }
+
     .inner-stars-section {
         flex-direction: column;
         gap: 2rem;
@@ -172,12 +176,21 @@
     }
 
     .big-ideas-section {
-        padding: 2rem 0;
+        padding: 0 0 3rem 0;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    .big-ideas-image {
+        width: 100%;
+        height: auto;
+        transform: scale(1.2);
+        transform-origin: center;
     }
 
     .big-ideas-cta {
-        margin-top: 0 !important;
-        /* No overlap on mobile */
+        margin-top: 4rem !important;
+        /* Increased space from the graphic on mobile */
     }
 }
 

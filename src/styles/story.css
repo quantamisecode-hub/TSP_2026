@@ -6,7 +6,8 @@
 
 .story-section {
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 3rem 1.5rem;
+    /* Further reduced from 4rem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +23,8 @@
 }
 
 .story-section.compact-section {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .story-hero,
@@ -118,7 +119,8 @@
     width: 100%;
     margin: 0 auto;
     gap: 2rem;
-    padding: 6rem 0;
+    padding: 0;
+    /* Removed internal padding override */
 }
 
 .path-text-content {
@@ -299,7 +301,6 @@
 
 .advisor-section {
     background-color: var(--color-white);
-    padding: 8rem 1rem;
     width: 100%;
 }
 
@@ -323,7 +324,7 @@
 }
 
 .advisor-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--color-dark-navy);
     font-weight: 800;
     margin-top: 0;
@@ -488,7 +489,7 @@
 }
 
 .charvi-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--color-dark-navy, var(--color-dark-navy));
     font-weight: 800;
     margin-top: 0;
@@ -532,7 +533,7 @@
     line-height: 1.6;
     margin-top: 0;
     margin-bottom: 1.1rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .charvi-right p:last-child {
@@ -624,7 +625,44 @@
 
 @media (max-width: 768px) {
     .story-section {
-        padding: 2rem 1rem;
+        padding: 1.8rem 1rem;
+        /* Further reduced from 2.5rem */
+        overflow: hidden;
+    }
+
+    .story-section.pt-0 {
+        padding-top: 0;
+    }
+
+    .story-section.compact-section {
+        padding: 1.8rem 1rem;
+    }
+
+    .story-hero {
+        transform: scale(1.4);
+        transform-origin: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        /* Add space after scaled image to prevent overlapping text */
+    }
+
+    .story-hero-text {
+        padding: 4rem 0.5rem 2.5rem 0.5rem;
+        /* Reduced horizontal padding */
+        text-align: center;
+        width: 100%;
+    }
+
+    .story-hero-text h4 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    .story-hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-top: 0.8rem;
     }
 
     .story-row {
@@ -645,12 +683,21 @@
     }
 
     .path-text-content {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
+        /* Reduced from 1rem */
         text-align: center;
     }
 
     .path-image-content {
         justify-content: center;
+        padding: 2rem 0;
+        /* Extra space for scaled image */
+    }
+
+    .path-svg {
+        transform: scale(1.3);
+        transform-origin: center;
+        margin: 1.5rem 0;
     }
 
     .inner-world-card {
@@ -725,18 +772,27 @@
 
     .charvi-right {
         padding-left: 0;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        /* Reduced from 2rem */
+    }
+
+    .charvi-right p {
+        text-align: justify;
     }
 
     .charvi-img {
         width: 100%;
-        max-width: 400px;
-        margin: 1.5rem auto 0;
+        max-width: 600px;
+        margin: 3.5rem auto 1.5rem;
+        /* Reduced bottom margin from 2.5rem */
+        transform: scale(1.4);
+        transform-origin: center;
     }
 
     .advisor-section-container {
         flex-direction: column-reverse;
-        padding: 4rem 1.5rem 3rem;
+        padding: 4rem 0.5rem 3rem;
+        /* Reduced horizontal padding */
         gap: 2rem;
         border-radius: 25px;
     }
@@ -746,12 +802,21 @@
         width: 100%;
         padding-top: 0;
         text-align: center;
+        height: auto;
+        /* Reset fixed height */
     }
 
-    .advisor-title {
+    .advisor-title,
+    .path-text-content h2,
+    .charvi-title,
+    .guiding-content h2 {
         font-size: 1.8rem;
-        margin-bottom: 1rem;
         text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .path-text-content p {
+        text-align: justify;
     }
 
     .advisor-subtitle-main {
@@ -766,29 +831,38 @@
 
     .advisor-logo-row {
         flex-direction: column;
-        margin-top: 1rem;
-        gap: 1.5rem;
+        margin-top: 2rem;
+        gap: 1rem;
         align-items: center;
     }
 
-    .advisor-logo-img {
-        width: 250px;
-        margin-left: 0;
+    .calm-connect-logo {
+        transform: none;
+        /* Remove desktop offset */
+        width: 160px;
+        margin-bottom: 0.5rem;
     }
 
     .advisor-logo-text {
         border-left: none;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #eee;
         padding-left: 0;
         padding-top: 1rem;
-        margin-left: 0;
-        margin-top: 0;
+        /* Reduced from 1.5rem */
+        margin: 0.5rem auto 0 auto;
+        /* Reduced from 1.5rem auto */
         text-align: center;
         min-height: auto;
+        transform: none;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .advisor-logo-text p {
         text-align: center;
+        font-size: 0.95rem;
     }
 
     .advisor-right {
@@ -798,8 +872,10 @@
 
     .advisor-card {
         width: 280px;
-        height: 420px;
-        margin: 40px auto 20px;
+        height: 360px;
+        /* Reduced from 420px */
+        margin: 60px auto 20px;
+        /* Increased top margin for the overlapping photo */
     }
 
     .advisor-card-img {
@@ -817,9 +893,6 @@
         font-size: 0.95rem;
     }
 
-    .guiding-section {
-        padding: 0 1rem;
-    }
 
     .guiding-container {
         display: flex;
@@ -836,8 +909,9 @@
         max-width: none;
         align-self: flex-start;
         margin: 0;
-        margin-left: -10%;
-        margin-top: -10%;
+        margin-left: -5%;
+        /* Moved right from -10% */
+        margin-top: -5%;
         margin-bottom: -10%;
     }
 
@@ -858,7 +932,6 @@
     }
 
     .guiding-content h2 {
-        font-size: 1.6rem;
         margin-bottom: 1rem;
     }
 

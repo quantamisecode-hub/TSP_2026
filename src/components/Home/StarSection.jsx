@@ -18,24 +18,25 @@ const StarSection = () => {
 
                 {/* Right: Text Content */}
                 <div className="w-full md:w-1/2 text-left" data-aos="fade-left">
-                    <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-6 uppercase leading-tight font-bold">
-                        WHAT WILL YOUR CHILD LEARN?<br />(AGES 5-12)
+                    <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-6 uppercase leading-tight font-bold text-center md:text-left">
+                        WHAT WILL YOUR CHILD LEARN? (AGES 5-12)
                     </h2>
-                    <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#636466' }}>
-                        {[
-                            "Respond when things feel hard",
-                            "Identify what’s within their control",
-                            "Understand how effort and focus work",
-                            "Keep trying when learning is challenging",
-                            "Acknowledge how emotions shape decisions",
-
-                        ].map((item, index) => (
-                            <li key={index} className="flex items-start gap-3">
-                                <span className="text-sm mt-1.5" style={{ color: '#636466' }}>•</span>
-                                <span>{item}</span>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="flex justify-center md:justify-start">
+                        <ul className="star-bullet-list space-y-4 font-[var(--font-accent)] text-lg text-left w-fit" style={{ color: '#636466' }}>
+                            {[
+                                "Respond when things feel hard",
+                                "Identify what’s within their control",
+                                "Understand how effort and focus work",
+                                "Keep trying when learning is challenging",
+                                "Acknowledge how emotions shape decisions",
+                            ].map((item, index) => (
+                                <li key={index} className="flex items-start gap-3">
+                                    <span className="text-sm mt-1.5" style={{ color: '#636466' }}>•</span>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
                     <div className="mt-8 flex justify-center md:justify-start">
                         <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-lg px-10 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline font-bold">

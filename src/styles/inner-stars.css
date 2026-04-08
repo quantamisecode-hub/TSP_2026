@@ -1,7 +1,19 @@
 .inner-stars-page {
     background-color: var(--color-white);
     min-height: 100vh;
-    padding-bottom: 4rem;
+}
+
+/* Standard Section Spacing */
+.is-standard-section-py {
+    padding-top: 4rem !important; /* Mobile py-16 equivalent */
+    padding-bottom: 4rem !important;
+}
+
+@media (min-width: 1024px) {
+    .is-standard-section-py {
+        padding-top: 6rem !important; /* Desktop py-24 equivalent */
+        padding-bottom: 6rem !important;
+    }
 }
 
 .inner-stars-hero-section {
@@ -63,21 +75,49 @@
     }
 }
 
+.why-title,
+.is-section-title,
+.is-diff-title,
+.ls-join-section-title,
+.is-enroll-title {
+    font-family: var(--font-heading) !important;
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+}
+
+.is-title {
+    font-family: var(--font-heading) !important;
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.25rem !important;
+    text-align: left !important;
+    transform: translateX(-0.5rem);
+}
+
+@media (max-width: 1024px) {
+    .is-title {
+        text-align: center !important;
+        transform: none !important;
+    }
+}
+
 .is-title {
     color: var(--color-red-orange);
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 0.25rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1;
 }
 
 .is-subtitle {
     color: var(--color-teal);
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    /* Reduced from 1.4rem */
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 1.25rem;
@@ -85,12 +125,17 @@
 
 @media (min-width: 1024px) {
 
-    .is-title {
-        font-size: 2.8rem;
+    .is-title,
+    .why-title,
+    .is-section-title,
+    .is-diff-title,
+    .ls-join-section-title {
+        font-size: 2.8rem !important;
     }
 
     .is-subtitle {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
+        /* Reduced from 2.1rem */
     }
 }
 
@@ -133,9 +178,9 @@
         border-radius: 30px;
     }
 
-    .is-title,
     .is-subtitle {
-        font-size: 2rem;
+        font-size: 1.3rem;
+        /* Reduced from 2rem to ensure it stays a subtitle */
     }
 
     .is-description {
@@ -161,10 +206,6 @@
 }
 
 @media (max-width: 1024px) {
-    .why-carousel-section {
-        padding: 40px 0 !important;
-    }
-
     .why-carousel-section>div {
         height: auto !important;
         min-height: unset !important;
@@ -258,12 +299,6 @@
 /* Why Matter Section Styles */
 .why-title {
     color: var(--color-dark-navy);
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
-    text-transform: uppercase;
 }
 
 .why-cta-btn {
@@ -341,13 +376,13 @@
 /* Two Ways to Join Section Styles */
 .ls-join-section-title {
     color: var(--color-dark-navy);
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 4.5rem !important; /* Move more as requested */
+}
+
+@media (min-width: 1024px) {
+    .ls-join-section-title {
+        margin-bottom: 5rem !important; /* More space on desktop */
+    }
 }
 
 .ls-join-card {
@@ -362,20 +397,24 @@
 .ls-join-svg-bg {
     position: absolute;
     top: 0;
-    height: 105%;
-    width: 220%;
+    height: 115%;
+    /* Increased from 105% for zoom */
+    width: 240%;
+    /* Increased proportionately */
     max-width: none;
     transform-origin: top left;
 }
 
 .left-slice {
-    left: -5%;
-    top: -2%;
+    left: -10%;
+    /* Adjusted for zoom */
+    top: -5%;
 }
 
 .right-slice {
-    left: -114%;
-    top: -2%;
+    left: -130%;
+    /* Adjusted for zoom */
+    top: -5%;
 }
 
 .ls-join-card-content {
@@ -392,6 +431,11 @@
 
 .ls-pink-nudge {
     padding-left: 6rem;
+}
+
+.ls-green-nudge .ls-join-card-list {
+    margin-left: -1rem;
+    /* Only move the list and starting footer left */
 }
 
 .ls-join-card-header {
@@ -431,7 +475,8 @@
 
 .ls-join-card-list {
     list-style: none;
-    padding: 0;
+    padding: 0 0 0 2rem;
+    /* Added 1rem left padding */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -441,9 +486,12 @@
 
 .ls-join-card-list li {
     font-weight: 500;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    line-height: 1.2;
-    text-align: left;
+    /* Reduced from 600 for a less heavy look */
+    font-size: clamp(1.1rem, 3.2vw, 1.35rem);
+    /* Increased size */
+    line-height: 1.3;
+    text-align: justify;
+    /* Justified as requested */
 }
 
 .ls-join-card-disclaimer {
@@ -465,7 +513,8 @@
     }
 
     .ls-join-card-list li {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
+        /* Increased from 0.85rem */
     }
 
     .ls-join-card-disclaimer {
@@ -476,6 +525,58 @@
     .ls-join-card.green-variant {
         margin-top: -9rem;
         /* Pushes only the green card up significantly more */
+    }
+
+    .ls-join-card-content {
+        padding: 52% 1rem 1rem 1rem !important;
+        /* Balanced padding */
+        align-items: center !important;
+        text-align: center !important;
+        transform: translateX(0) !important;
+        /* Centered */
+    }
+
+    .ls-pink-nudge,
+    .ls-green-nudge,
+    .ls-green-nudge .ls-join-card-list {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .ls-join-card-subtitle {
+        margin-bottom: 1rem !important;
+    }
+
+    .pink-subtitle {
+        margin-left: -1.3rem !important;
+        /* Move Saturday subtitle left */
+    }
+
+    .ls-pink-nudge .ls-join-card-list {
+        margin-left: 1.5rem !important;
+        /* Move Saturday list right */
+    }
+
+    .green-subtitle {
+        margin-left: 1.5rem !important;
+        /* Move Holiday subtitle right as requested */
+    }
+
+    .ls-green-nudge {
+        transform: translateX(0) !important;
+        /* Reset shift */
+    }
+
+    .ls-join-card-list {
+        display: inline-flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding-left: 0 !important;
+    }
+
+    .ls-join-card-list li {
+        text-align: left !important;
+        font-size: 1rem !important;
     }
 
     @media (max-width: 480px) {
@@ -493,6 +594,34 @@
             padding-top: 52%;
         }
     }
+
+    .inside-lesson-img {
+        transform: scale(1.5) !important;
+        transform-origin: top center !important;
+        margin-top: -1rem !important;
+        margin-bottom: 3rem !important;
+        /* Push the next section away */
+    }
+
+    .sneak-peek-btn {
+        top: 56% !important;
+        /* Move down for mobile */
+        font-size: 0.5rem !important;
+        padding: 0.2rem 0.4rem !important;
+        border-width: 1px !important;
+        left: 67% !important;
+        /* Move more left for mobile */
+    }
+
+    .left-slice {
+        left: -13.5% !important;
+        /* Center pink calendar precisely */
+    }
+
+    .right-slice {
+        left: -13.5%important;
+        /* Center purple calendar precisely */
+    }
 }
 
 /* Tail Graphic & Enrollment Section Spacing */
@@ -500,9 +629,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: -6rem;
-    /* Reduced from -10rem to create a small gap below the holiday card */
-    margin-bottom: -3rem;
+    margin-top: -4rem; 
+    margin-bottom: -1rem !important; /* Move title closer on mobile */
     position: relative;
     z-index: 5;
 }
@@ -513,52 +641,359 @@
 }
 
 .ls-enrollment-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: var(--color-white);
+    padding-top: 0 !important;
 }
 
-@media (min-width: 768px) {
-    .ls-tail-container {
-        margin-top: -12rem;
-        margin-bottom: -4rem;
-    }
+.is-enroll-title {
+    color: var(--color-dark-navy) !important;
+    text-align: center;
+    margin-top: 0 !important;
+}
 
-    .ls-enrollment-section {
-        padding-top: 0;
-        padding-bottom: 4rem;
+@media (min-width: 1024px) {
+    .ls-tail-container {
+        margin-bottom: -6rem !important; /* Pull title up on desktop only */
+    }
+    .is-enroll-title {
+        margin-top: -2rem !important;
     }
 }
 
 .is-section-title {
     color: var(--color-dark-navy);
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
 }
 
 .is-diff-title {
     color: #ecaa19;
     /* Yellow gold */
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
     display: block;
-    text-align: center;
 }
 
-.is-enroll-title {
-    color: #122f52;
+.sneak-peek-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-deep-purple);
+    color: var(--color-white) !important;
     font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 4vw, 2.22rem);
     font-weight: 800;
+    font-size: 0.65rem;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    text-transform: none;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    white-space: nowrap;
+    border: 1.5px solid var(--color-white);
+}
+
+.sneak-peek-btn:hover {
+    transform: translate(-50%, -55%) scale(1.05) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+    .sneak-peek-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+        border-width: 1.5px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sneak-peek-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Sneak Peek Modal Styles */
+.ls-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(18, 47, 82, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1.5rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.ls-modal-content {
+    background-color: #fff8f1;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 40px;
+    padding: 3rem 2rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.ls-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--color-dark-navy);
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.ls-modal-close:hover {
+    transform: scale(1.1);
+    color: var(--color-red-orange);
+}
+
+.ls-modal-main-title {
+    text-align: center;
+    color: var(--color-dark-navy);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.ls-flip-scene {
+    width: 100%;
+    max-width: 1050px;
+    /* Reduced from 1140px (3 * 350px) */
+    height: 475px;
+    /* Adjusted to maintain SVG aspect ratio at 1050px width */
+    margin: 0 auto;
+    perspective: 2500px;
+    cursor: pointer;
+}
+
+.ls-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.ls-modal-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    gap: 0;
+}
+
+.ls-peek-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    /* Reduced from 380px */
+    height: 100%;
+    padding: 3.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.ls-card-orange {
+    background-color: #f1a62d;
+}
+
+.ls-card-teal {
+    background-color: #5dbdb0;
+}
+
+.ls-card-green {
+    background-color: #a4cd11;
+}
+
+.ls-card-title {
+    color: var(--color-deep-purple);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.65rem;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.ls-card-title span {
+    text-align: left;
+    display: inline-block;
+}
+
+.ls-card-svg-wrapper {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ls-or-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-deep-purple);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1rem;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.ls-pebble-wrapper .ls-or-overlay {
+    transform: translate(-35%, -50%);
+    /* Adjust for asymmetrical circles */
+}
+
+.ls-card-svg-wrapper img {
+    width: 90%;
+    /* Reduced from 100% */
+    height: auto;
+    scale: 1.0;
+    /* Reset general scale */
+    transition: transform 0.3s ease;
+}
+
+.ls-card-labels {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+    color: var(--color-deep-purple);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.ls-star-wrapper img {
+    scale: 1.35;
+}
+
+.ls-pebble-wrapper img {
+    scale: 1.4;
+}
+
+.ls-flip-scene:hover .ls-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.ls-flip-card-front,
+.ls-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 40px;
+}
+
+.ls-flip-card-front {
+    z-index: 2;
+}
+
+.ls-flip-card-back {
+    background-color: transparent;
+    transform: rotateY(180deg);
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.ls-back-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Changed from fill to cover for better photo scaling */
+    border-radius: 40px;
+    transform: scale(1.08) translateX(0.8%) translateY(-2.8%);
+    /* Reset scale and move up to show bottom borders clearly */
+    transform-origin: center center;
+}
+
+/* Make sure the modal doesn't feel too cramped */
+.ls-modal-content {
+    max-width: 1240px;
+    padding: 3rem 4rem;
+}
+
+@media (max-width: 768px) {
+    .ls-modal-content {
+        padding: 2.5rem 1rem 1rem;
+        width: 95%;
+        max-height: 90vh;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .ls-modal-main-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ls-flip-scene {
+        height: 420px;
+        width: 100%;
+        max-width: none;
+        perspective: 2000px;
+    }
+
+    .ls-modal-cards-container {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        overflow-x: auto;
+        padding-bottom: 1.5rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
+    }
+
+    .ls-peek-card {
+        flex: 0 0 280px;
+        scroll-snap-align: center;
+        padding: 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .ls-card-title {
+        font-size: 1.35rem;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .ls-modal-close {
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 2.5rem;
+    }
 }

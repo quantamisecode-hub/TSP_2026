@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BigIdeasBg from '../../assets/images/Homepage/Big Ideas copy.svg';
+import BigIdeasDesktop from '../../assets/images/Homepage/Big Ideas copy.svg';
+import BigIdeasMobile from '../../assets/images/Homepage/Big Ideas copy 2.svg';
 
 const BigIdeasSection = () => {
     return (
         <section className="section big-ideas-section">
-            {/* Using the SVG as a full graphic as it likely contains the notebook lines and sticky notes */}
-            <img src={BigIdeasBg} alt="Big Ideas" className="big-ideas-image" data-aos="zoom-in" />
+            <picture>
+                <source media="(max-width: 768px)" srcSet={BigIdeasMobile} />
+                <img
+                    src={BigIdeasDesktop}
+                    alt="Big Ideas"
+                    className="big-ideas-image"
+                />
+            </picture>
             <div className="big-ideas-cta flex justify-center px-4" data-aos="fade-up" data-aos-delay="200">
                 <Link
                     to="/programs"

@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 
 // SVGs Imports
 import BannerTop from '../assets/Story/BAnner.svg';
+import BannerMobile from '../assets/Story/BAnner copy.svg';
 import Guiding from '../assets/Story/Guiding.svg';
 import InnerWorld from '../assets/Story/Inner World.svg';
 import Path from '../assets/Story/Path.svg';
@@ -16,9 +17,6 @@ import CalmConnectLogo from '../assets/Story/Calm Connect Therapy.svg';
 
 
 const StoryPage = () => {
-    // Force the inbuilt SVG animation to restart by adding a timestamp
-    const bannerUrl = `${BannerTop}?t=${Date.now()}`;
-
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         window.scrollTo(0, 0);
@@ -31,7 +29,10 @@ const StoryPage = () => {
                 description="Discover why The Starry Path was created. Founded by a teacher and psychologist to bridge the gap between education and emotional intelligence for every child."
             />
             <section className="story-section pt-0" data-aos="fade-in">
-                <img src={bannerUrl} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
+                <picture className="story-hero animated-banner">
+                    <source media="(max-width: 768px)" srcSet={BannerMobile} />
+                    <img src={BannerTop} alt="Why The Starry Path Exists" className="w-full h-auto block" />
+                </picture>
                 <div className="story-hero-text">
                     <h4>A child's inner world is made of many&nbsp;pieces </h4>
                     <p>Understanding how those pieces work together builds habits of mind and&nbsp;character </p>
@@ -44,8 +45,7 @@ const StoryPage = () => {
                     <div className="path-text-content">
                         <h2>WHY THE STARRY{" "}<br className="hidden md:block" />PATH EXISTS?</h2>
                         <p className="path-highlight">
-                            Education builds knowledge and&nbsp;skills.
-                            <br className="hidden md:block" />
+                            Education builds knowledge and&nbsp;skills. <br />
                             <strong>Habits of mind help children use them
                                 <br className="hidden md:block" />
                                 in real&nbsp;situations.</strong>
@@ -111,12 +111,12 @@ const StoryPage = () => {
                         <img src={Charvi} alt="My Story - Charvi" className="charvi-img" />
                     </div>
                     <div className="charvi-right">
-                        <p>As a teacher with a background in psychology, I've always noticed what's missing in education: <strong>the human skills of character, values, and healthy habits of&nbsp;mind.</strong></p>
+                        <p>As a teacher with a background in psychology, I've always noticed what's missing in education: <strong>the human skills of character, values, and healthy<br /> habits of&nbsp;mind.</strong></p>
                         <p>This belief is deeply&nbsp;personal.</p>
                         <p>As a teenager and young adult, I lived through a life-threatening medical condition that tested resilience and grit more than&nbsp;once.</p>
-                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how their mind&nbsp;works?</strong></p>
+                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how<br />their mind&nbsp;works?</strong></p>
                         <p>These aren't skills for later. They're skills for&nbsp;childhood.</p>
-                        <p><strong>By bringing psychology and education together, </strong>I created a practical, child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they&nbsp;become.</p>
+                        <p><strong>By bringing psychology and education together, </strong>I created a practical,<br />child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they&nbsp;become.</p>
                         <p>As a mum, what I want most for my child is simple:<br />to understand herself, to try again, and to act with&nbsp;courage.</p>
                         <p>That is the purpose of The Starry Path:<br /><strong>helping children understand themselves and grow with&nbsp;strength.</strong></p>
                     </div>
