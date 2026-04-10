@@ -291,21 +291,15 @@ const InnerStarsPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-12 max-w-[1200px] mx-auto mb-[-60px] md:mb-0" data-aos="fade-up" data-aos-delay="200">
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
                             <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-13.94%' }} />
-                            <div className="absolute left-0 right-0 flex items-center justify-center px-4" style={{ top: '56.78%', height: '26.89%' }}>
-                                <h3 className="text-white font-bold text-center text-base sm:text-lg lg:text-xl leading-tight mt-8">Growing Strong Humans</h3>
-                            </div>
+
                         </div>
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
                             <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-123.8%' }} />
-                            <div className="absolute left-0 right-0 flex items-center justify-center px-4" style={{ top: '56.78%', height: '26.89%' }}>
-                                <h3 className="text-white font-bold text-center text-base sm:text-lg lg:text-xl leading-tight mt-8">Building Habits of Mind</h3>
-                            </div>
+
                         </div>
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
                             <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-233.66%' }} />
-                            <div className="absolute left-0 right-0 flex items-center justify-center px-2" style={{ top: '56.78%', height: '26.89%' }}>
-                                <h3 className="text-white font-bold text-center text-base sm:text-lg lg:text-xl leading-tight mt-8">Shaping Character & Values</h3>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -554,22 +548,22 @@ const InnerStarsPage = () => {
 
             {/* Sneak Peek Modal */}
             {isSneakPeekOpen && (
-                <div 
+                <div
                     className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 lg:p-8"
                     onClick={() => setIsSneakPeekOpen(false)}
                 >
-                    <div 
+                    <div
                         className="bg-[#fff8f1] w-full max-w-[1250px] max-h-[90vh] rounded-[30px] lg:rounded-[60px] p-6 lg:p-14 relative shadow-2xl overflow-hidden flex flex-col"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
-                        <button 
+                        <button
                             className="absolute top-4 right-6 lg:top-8 lg:right-10 text-4xl lg:text-5xl text-[#1a2b4b] hover:scale-110 transition-transform leading-none z-50 select-none pb-2"
                             onClick={() => setIsSneakPeekOpen(false)}
                         >
                             &times;
                         </button>
-                        
+
                         {/* Title */}
                         <h2 className="text-center font-outfit font-bold text-2xl lg:text-4xl text-[#1a2b4b] mb-6 lg:mb-16 tracking-widest uppercase">
                             INSIDE A LESSON
