@@ -369,12 +369,12 @@ const InnerStarsPage = () => {
             <section className="inside-a-lesson-section is-standard-section-py">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
-                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)' }}>INSIDE A LESSON</h2>
+                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textTransform: 'none' }}>Sneak Peek</h2>
                     </div>
                     <div className="w-full max-w-[1280px] mx-auto relative group" data-aos="fade-up">
                         <picture>
                             <source media="(max-width: 768px)" srcSet={InsideALessonMobileSvg} />
-                            <img src={InsideALessonSvg} alt="Inside a Lesson" className="inside-lesson-img w-full h-auto origin-top" />
+                            <img src={InsideALessonSvg} alt="Sneak Peek" className="inside-lesson-img w-full h-auto origin-top" />
                         </picture>
                         <a onClick={(e) => { e.preventDefault(); setIsSneakPeekOpen(true); }} className="sneak-peek-btn absolute cursor-pointer" style={{ top: '18%', left: '70.3%', transform: 'translate(-50%, -50%)' }}>
                             Sneak Peek
@@ -565,8 +565,8 @@ const InnerStarsPage = () => {
                         </button>
 
                         {/* Title */}
-                        <h2 className="text-center font-outfit font-bold text-2xl lg:text-4xl text-[#1a2b4b] mb-6 lg:mb-16 tracking-widest uppercase">
-                            INSIDE A LESSON
+                        <h2 className="text-center font-outfit font-bold text-2xl lg:text-4xl text-[#1a2b4b] mb-6 lg:mb-16 tracking-widest" style={{ textTransform: 'none' }}>
+                            Sneak Peek
                         </h2>
 
                         {/* Responsive Container: Scrollable on Mobile, Stacked/Overlapping on Desktop */}
