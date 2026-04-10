@@ -5,13 +5,15 @@
 
 /* Standard Section Spacing */
 .is-standard-section-py {
-    padding-top: 4rem !important; /* Mobile py-16 equivalent */
+    padding-top: 4rem !important;
+    /* Mobile py-16 equivalent */
     padding-bottom: 4rem !important;
 }
 
 @media (min-width: 1024px) {
     .is-standard-section-py {
-        padding-top: 6rem !important; /* Desktop py-24 equivalent */
+        padding-top: 6rem !important;
+        /* Desktop py-24 equivalent */
         padding-bottom: 6rem !important;
     }
 }
@@ -36,22 +38,22 @@
 
 .inner-stars-card {
     background-color: var(--color-dark-navy);
-    border-radius: 30px;
-    padding: 1.5rem 1.5rem;
+    border-radius: 10px;
+    padding: 1.15rem 1.5rem;
     width: 100%;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
     .inner-stars-card {
-        border-radius: 60px;
-        padding: 3rem 4rem;
+        border-radius: 20px;
+        padding: 1.75rem 4rem;
     }
 }
 
 @media (min-width: 1024px) {
     .inner-stars-card {
-        padding: 4rem 5rem;
+        padding: 2rem 5rem;
     }
 }
 
@@ -121,6 +123,8 @@
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 1.25rem;
+    position: relative;
+    left: -0.55rem;
 }
 
 @media (min-width: 1024px) {
@@ -147,6 +151,8 @@
     max-width: 32rem;
     opacity: 0.9;
     font-weight: 500;
+    position: relative;
+    left: -0.55rem;
 }
 
 @media (min-width: 768px) {
@@ -376,12 +382,14 @@
 /* Two Ways to Join Section Styles */
 .ls-join-section-title {
     color: var(--color-dark-navy);
-    margin-bottom: 4.5rem !important; /* Move more as requested */
+    margin-bottom: 4.5rem !important;
+    /* Move more as requested */
 }
 
 @media (min-width: 1024px) {
     .ls-join-section-title {
-        margin-bottom: 5rem !important; /* More space on desktop */
+        margin-bottom: 5rem !important;
+        /* More space on desktop */
     }
 }
 
@@ -461,9 +469,21 @@
     color: #fcb116;
 }
 
+.pink-title {
+    margin-left: -2rem !important;
+}
+
+.pink-subtitle {
+    margin-left: -3.7rem !important;
+}
+
 .green-title,
 .green-subtitle {
     color: #523cac;
+}
+
+.green-title {
+    margin-left: -1rem !important;
 }
 
 .ls-join-card-subtitle {
@@ -547,6 +567,11 @@
         margin-bottom: 1rem !important;
     }
 
+    .pink-title {
+        margin-left: -0.5rem !important;
+        /* Shift right slightly on mobile */
+    }
+
     .pink-subtitle {
         margin-left: -1.3rem !important;
         /* Move Saturday subtitle left */
@@ -558,8 +583,8 @@
     }
 
     .green-subtitle {
-        margin-left: 1.5rem !important;
-        /* Move Holiday subtitle right as requested */
+        margin-left: 1rem !important;
+        /* Adjusted Holiday subtitle left slightly */
     }
 
     .ls-green-nudge {
@@ -629,8 +654,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: -4rem; 
-    margin-bottom: -1rem !important; /* Move title closer on mobile */
+    margin-top: -4rem;
+    margin-bottom: -1rem !important;
+    /* Move title closer on mobile */
     position: relative;
     z-index: 5;
 }
@@ -652,8 +678,10 @@
 
 @media (min-width: 1024px) {
     .ls-tail-container {
-        margin-bottom: -6rem !important; /* Pull title up on desktop only */
+        margin-bottom: -6rem !important;
+        /* Pull title up on desktop only */
     }
+
     .is-enroll-title {
         margin-top: -2rem !important;
     }
@@ -736,9 +764,11 @@
 .ls-modal-content {
     background-color: #fff8f1;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
+    height: auto;
+    overflow: visible;
     border-radius: 40px;
-    padding: 3rem 2rem;
+    padding: 1.5rem 3rem 1rem;
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
@@ -767,17 +797,15 @@
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 2.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
     letter-spacing: 0.05em;
 }
 
 .ls-flip-scene {
-    width: 100%;
-    max-width: 1050px;
-    /* Reduced from 1140px (3 * 350px) */
-    height: 475px;
-    /* Adjusted to maintain SVG aspect ratio at 1050px width */
-    margin: 0 auto;
+    width: 340px;
+    max-width: 340px;
+    height: 450px;
+    margin: 0;
     perspective: 2500px;
     cursor: pointer;
 }
@@ -786,7 +814,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
+    margin: 0;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
 }
@@ -913,7 +941,8 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 40px;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .ls-flip-card-front {
@@ -923,26 +952,29 @@
 .ls-flip-card-back {
     background-color: transparent;
     transform: rotateY(180deg);
-    overflow: hidden;
+    overflow: visible;
     border-radius: 40px;
 }
 
 .ls-back-illustration {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Changed from fill to cover for better photo scaling */
-    border-radius: 40px;
-    transform: scale(1.08) translateX(0.8%) translateY(-2.8%);
-    /* Reset scale and move up to show bottom borders clearly */
-    transform-origin: center center;
+    display: block !important;
+    min-width: 120% !important;
+    width: 120% !important;
+    max-width: none !important;
+    height: auto !important;
+    /* Cache-bust: 12:32 */
+}
+
+.ls-back-illustration-2 {
+    display: block !important;
+    min-width: 115% !important;
+    width: 115% !important;
+    max-width: none !important;
+    height: auto !important;
 }
 
 /* Make sure the modal doesn't feel too cramped */
-.ls-modal-content {
-    max-width: 1240px;
-    padding: 3rem 4rem;
-}
+/* Combined above */
 
 @media (max-width: 768px) {
     .ls-modal-content {
@@ -995,5 +1027,74 @@
         top: 0.5rem;
         right: 1rem;
         font-size: 2.5rem;
+    }
+}
+
+/* FAQ Section Styles */
+.ls-faq-container {
+    background-color: var(--color-white) !important;
+    border: 6px solid var(--color-dark-navy) !important;
+    border-radius: 60px !important;
+    padding: 2.25rem 4rem !important;
+    box-shadow: none !important;
+}
+
+.ls-faq-title {
+    color: var(--color-teal) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 3rem !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.ls-faq-item {
+    border-bottom: 2px solid var(--color-yellow-gold) !important;
+}
+
+.ls-faq-item:last-child {
+    border-bottom: none !important;
+}
+
+.ls-faq-question {
+    color: var(--color-hot-pink) !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    padding: 1.15rem 0 !important;
+}
+
+.ls-faq-toggle {
+    color: var(--color-dark-navy) !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+}
+
+.ls-faq-answer p {
+    color: var(--color-grey-text) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+    padding-bottom: 1.5rem !important;
+    line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+    .ls-faq-container {
+        border-width: 4px !important;
+        border-radius: 40px !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .ls-faq-title {
+        font-size: 1.7rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .ls-faq-question {
+        font-size: 1.15rem !important;
+        padding: 1.25rem 0 !important;
     }
 }

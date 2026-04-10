@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
@@ -30,6 +31,7 @@ import BigSixSvg from '../assets/images/Learning Star/This Big Six.svg';
 import InsideProgramPhoto from '../assets/images/Learning Star/Image_TSP.png';
 
 const LearningStarsPage = () => {
+    const location = useLocation();
     const [openFaq, setOpenFaq] = React.useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [insideSlide, setInsideSlide] = useState(0);
@@ -37,9 +39,27 @@ const LearningStarsPage = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        const handleHashScroll = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                    setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
+        };
+
+        handleHashScroll();
+    }, [location]);
+
+    useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-        window.scrollTo(0, 0);
 
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % researchSlides.length);
@@ -285,7 +305,7 @@ const LearningStarsPage = () => {
                     <div className="text-center mb-10 lg:mb-16" data-aos="fade-up">
                         <h2 className="ls-learn-title">WHAT CHILDREN LEARN</h2>
                         <p className="ls-learn-subtitle mt-4 text-white opacity-90 text-lg md:text-xl font-body">
-                            Build the foundation skills needed for reading and writing
+                            Build the foundations needed for reading and writing
                         </p>
                     </div>
 
@@ -317,9 +337,6 @@ const LearningStarsPage = () => {
                     </div>
 
                     <div className="text-center mt-6 lg:mt-8" data-aos="fade-up">
-                        <p className="text-white opacity-80 text-base md:text-xl font-light italic font-body">
-                            Build the foundation skills needed for reading and writing
-                        </p>
                     </div>
                 </div>
             </section>
@@ -685,9 +702,9 @@ const LearningStarsPage = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="ls-faq-section py-12 bg-[var(--color-dark-navy)]">
+            <section className="ls-faq-section py-12 bg-transparent">
                 <div className="max-w-[1200px] mx-auto px-6">
-                    <div className="ls-faq-container bg-[#FCF8F2] rounded-[40px] p-8 lg:p-14 shadow-xl" data-aos="fade-up">
+                    <div className="ls-faq-container" data-aos="fade-up">
                         <h2 className="ls-faq-title">
                             FREQUENTLY ASKED QUESTIONS
                         </h2>
@@ -723,20 +740,20 @@ const LearningStarsPage = () => {
                                     a: "If you're noticing gaps in their foundation skills, then your child is ready for the clarity our program provides."
                                 }
                             ].map((faq, index) => (
-                                <div key={index} className="ls-faq-item border-b border-[#2DD4BF]/30 last:border-0 border-solid">
+                                <div key={index} className="ls-faq-item">
                                     <button
                                         onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                                        className="w-full py-3 flex items-center justify-between text-left transition-all"
+                                        className="w-full flex items-center justify-between text-left transition-all"
                                     >
-                                        <span className={`text-[#E44C17] text-lg lg:text-xl font-bold font-heading ${openFaq === index ? 'opacity-100' : 'opacity-90'}`}>
+                                        <span className={`ls-faq-question ${openFaq === index ? 'opacity-100' : 'opacity-90'}`}>
                                             {faq.q}
                                         </span>
-                                        <span className="text-[#002B49] text-2xl font-light">
+                                        <span className="ls-faq-toggle">
                                             {openFaq === index ? '−' : '+'}
                                         </span>
                                     </button>
-                                    <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-40 pb-3' : 'max-h-0'}`}>
-                                        <p className="text-[#4A4A4A] text-[1rem] lg:text-[1.1rem] font-body font-light leading-relaxed">
+                                    <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-40' : 'max-h-0'}`}>
+                                        <p>
                                             {faq.a}
                                         </p>
                                     </div>

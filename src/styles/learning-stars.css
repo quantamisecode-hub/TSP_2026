@@ -132,28 +132,32 @@
 }
 
 .ls-title {
-    margin-bottom: 0.25rem !important;
-    text-align: left !important;
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
 }
-
 
 .ls-subtitle {
     color: var(--color-yellow-gold);
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center !important;
 }
 
 @media (min-width: 1024px) {
     .ls-title {
         margin-bottom: 0.5rem !important;
+        text-align: left !important;
     }
 
     .ls-subtitle {
         font-size: 1.8rem;
         margin-bottom: 1.25rem;
+        text-align: left !important;
     }
 }
 
@@ -350,7 +354,7 @@
 
 /* Inside the Program Section */
 .ls-inside-program-section {
-    padding: 3rem 0 !important;
+    padding: 3rem 0 1rem 0 !important;
     overflow: hidden;
     background-color: var(--color-dark-navy);
 }
@@ -451,7 +455,7 @@
 
 /* Intentional Teaching Approach Section */
 .ls-intentional-section {
-    padding: 3rem 0;
+    padding: 0rem 0 3rem 0;
     background-color: var(--color-dark-navy);
     overflow: hidden;
 }
@@ -493,7 +497,7 @@
     /* Hugs the text width */
     max-width: 95%;
     /* Responsive safety */
-    margin: 0.5rem auto 2rem auto;
+    margin: 0.25rem auto 1.5rem auto;
     /* Reduced top margin since heading above has its own spacing */
     padding: 0;
     /* Removed large box padding */
@@ -508,14 +512,24 @@
 .ls-intentional-info-text {
     color: white;
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    /* Slightly smaller to help fit better */
+    font-size: 1.15rem;
     letter-spacing: 0.02em;
-    margin: 0;
-    opacity: 0.9;
+    opacity: 0.95;
     font-weight: 300;
-    white-space: nowrap;
-    /* Keeps it on one line as requested */
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.6;
+    white-space: nowrap !important;
+    max-width: none !important;
+}
+
+@media (max-width: 1024px) {
+    .ls-intentional-info-text {
+        white-space: normal !important;
+        max-width: 95% !important;
+        text-align: justify !important;
+        margin-left: rem !important;
+    }
 }
 
 /* Research Section */
@@ -801,7 +815,7 @@
 
     .ls-intentional-info-text {
         white-space: normal;
-        text-align: center;
+        text-align: left;
         line-height: 1.5;
         font-size: 1.1rem;
         max-width: 300px;
@@ -1102,7 +1116,71 @@
     color: #FBB03B !important;
 }
 
+/* FAQ Section Styles */
+.ls-faq-container {
+    background-color: var(--color-white) !important;
+    border: 6px solid var(--color-dark-navy) !important;
+    border-radius: 60px !important;
+    padding: 2.25rem 4rem !important;
+    box-shadow: none !important;
+}
+
 .ls-faq-title {
-    color: #FBB03B !important;
-    text-align: center;
+    color: var(--color-teal) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 3rem !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.ls-faq-item {
+    border-bottom: 2px solid var(--color-yellow-gold) !important;
+}
+
+.ls-faq-item:last-child {
+    border-bottom: none !important;
+}
+
+.ls-faq-question {
+    color: var(--color-hot-pink) !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    padding: 1.15rem 0 !important;
+}
+
+.ls-faq-toggle {
+    color: var(--color-dark-navy) !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+}
+
+.ls-faq-answer p {
+    color: var(--color-grey-text) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+    padding-bottom: 1.5rem !important;
+    line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+    .ls-faq-container {
+        border-width: 4px !important;
+        border-radius: 40px !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .ls-faq-title {
+        font-size: 1.7rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .ls-faq-question {
+        font-size: 1.15rem !important;
+        padding: 1.25rem 0 !important;
+    }
 }

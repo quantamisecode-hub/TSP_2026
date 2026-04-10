@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
@@ -26,9 +27,18 @@ import RocksStarsSvg from '../assets/images/Inner Stars/Rocks or Stars.svg';
 import StarBreathSvg from '../assets/Story/Star Breath.svg';
 import InsideALesson2Svg from '../assets/images/Inner Stars/Inside a Lesson 2.svg';
 
+import PopUp1Svg from '../assets/images/Learning Star/Pop up/1.svg';
+import PopUp2Svg from '../assets/images/Learning Star/Pop up/2.svg';
+import PopUp3Svg from '../assets/images/Learning Star/Pop up/3.svg';
+import PopUp4Svg from '../assets/images/Learning Star/Pop up/4.svg';
+import PopUp5Svg from '../assets/images/Learning Star/Pop up/5.svg';
+import PopUp6Svg from '../assets/images/Learning Star/Pop up/6.svg';
+
 const InnerStarsPage = () => {
+    const location = useLocation();
     const [isSneakPeekOpen, setIsSneakPeekOpen] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [openFaq, setOpenFaq] = useState(0);
     const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
     const [isLoading, setIsLoading] = useState(false);
 
@@ -72,9 +82,6 @@ const InnerStarsPage = () => {
     ];
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
-        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-
         const handleHashScroll = () => {
             const hash = window.location.hash;
             if (hash) {
@@ -91,7 +98,11 @@ const InnerStarsPage = () => {
         };
 
         handleHashScroll();
-        window.addEventListener('hashchange', handleHashScroll);
+    }, [location]);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
 
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -99,9 +110,8 @@ const InnerStarsPage = () => {
 
         return () => {
             clearInterval(timer);
-            window.removeEventListener('hashchange', handleHashScroll);
         };
-    }, [slides.length]);
+    }, []);
 
     const openCalendly = (e) => {
         e.preventDefault();
@@ -274,7 +284,7 @@ const InnerStarsPage = () => {
                     <div data-aos="fade-up">
                         <h2 className="is-section-title">LIFE SKILLS IN EDUCATION</h2>
                         <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12">
-                            Inner Stars brings life skills into education by building resilience.
+                            Inner Stars brings life skills into education by building resilience
                         </p>
                     </div>
 
@@ -415,7 +425,7 @@ const InnerStarsPage = () => {
                         <div className="ls-join-card pink-variant" data-aos="fade-up">
                             <img src={HowToJoinSvg} alt="" className="ls-join-svg-bg left-slice" />
                             <div className="ls-join-card-content ls-pink-nudge">
-                                <h3 className="ls-join-card-title pink-title">SATURDAYS SESSIONS</h3>
+                                <h3 className="ls-join-card-title pink-title">SATURDAY SESSIONS</h3>
                                 <p className="ls-join-card-subtitle pink-subtitle">Weekend Sessions</p>
                                 <ul className="ls-join-card-list">
                                     <li>Two inner strengths<br /> each term</li>
@@ -427,7 +437,7 @@ const InnerStarsPage = () => {
                         <div className="ls-join-card green-variant" data-aos="fade-up" data-aos-delay="200">
                             <img src={HowToJoinSvg} alt="" className="ls-join-svg-bg right-slice" />
                             <div className="ls-join-card-content ls-green-nudge">
-                                <h3 className="ls-join-card-title green-title">HOLIDAYS INTENSIVES</h3>
+                                <h3 className="ls-join-card-title green-title">HOLIDAY INTENSIVES</h3>
                                 <p className="ls-join-card-subtitle green-subtitle">2 to 6 Days Over 2 Weeks*</p>
                                 <ul className="ls-join-card-list">
                                     <li>Two inner strengths<br /> at a time</li>
@@ -474,6 +484,60 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
+            <section className="ls-faq-section py-12 bg-white">
+                <div className="max-w-[1200px] mx-auto px-6">
+                    <div className="ls-faq-container bg-[#FCF8F2] rounded-[40px] p-8 lg:p-14 shadow-xl" data-aos="fade-up">
+                        <h2 className="ls-faq-title">
+                            FREQUENTLY ASKED QUESTIONS
+                        </h2>
+
+                        <div className="ls-faq-list space-y-0">
+                            {[
+                                {
+                                    q: "Is this program for all children?",
+                                    a: "Yes. Inner Stars is designed for children aged 5 to 10. It supports children who are doing well at school and those who are still developing, by building strong habits of mind that support learning and life."
+                                },
+                                {
+                                    q: "Is this counselling or therapy?",
+                                    a: "No. Inner Stars is an educational program. Children learn simple language, practical tools, and habits they can use in everyday moments at home, at school, and with friends."
+                                },
+                                {
+                                    q: "Will this help my child who sometimes worries or feels overwhelmed?",
+                                    a: "Yes. Inner Stars does not promise a life without worry. That is not realistic for any child. It helps children recognise what they are feeling, steady themselves, and choose helpful actions in real situations."
+                                },
+                                {
+                                    q: "How is Inner Stars different from wellbeing lessons at school?",
+                                    a: "School wellbeing lessons often introduce ideas. Inner Stars helps children use them. Children learn clear language, visual tools, and habits of mind they can apply when something feels hard, friendships feel uncertain, or big emotions show up. Families also learn how to support these skills at home, so children can use them in real life situations. Through repetition and consistent practice, these habits become part of how children think and respond."
+                                },
+                                {
+                                    q: "How is this different from doing more academics after school?",
+                                    a: "More academic practice builds knowledge and skills. Inner Stars builds how children approach learning. It strengthens focus, effort, decision making, and the ability to keep going when learning feels challenging. These habits support academic learning and help children use what they know more effectively."
+                                }
+                            ].map((faq, index) => (
+                                <div key={index} className="ls-faq-item border-b border-[#2DD4BF]/30 last:border-0 border-solid">
+                                    <button
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                        className="w-full py-3 flex items-center justify-between text-left transition-all"
+                                    >
+                                        <span className={`text-[#E44C17] text-lg lg:text-xl font-bold font-heading ${openFaq === index ? 'opacity-100' : 'opacity-90'}`}>
+                                            {faq.q}
+                                        </span>
+                                        <span className="text-[#002B49] text-2xl font-light">
+                                            {openFaq === index ? '−' : '+'}
+                                        </span>
+                                    </button>
+                                    <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-64 pb-3' : 'max-h-0'}`}>
+                                        <p className="text-[#4A4A4A] text-[1rem] lg:text-[1.1rem] font-body font-light leading-relaxed text-justify" style={{ textJustify: 'inter-word' }}>
+                                            {faq.a}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Testimonial Section */}
             <section className="is-testimonial-section pt-4 pb-16 lg:pt-6 lg:pb-24">
                 <div className="max-w-[1200px] mx-auto px-6">
@@ -490,45 +554,83 @@ const InnerStarsPage = () => {
 
             {/* Sneak Peek Modal */}
             {isSneakPeekOpen && (
-                <div className="ls-modal-overlay" onClick={() => setIsSneakPeekOpen(false)}>
-                    <div className="ls-modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="ls-modal-close" onClick={() => setIsSneakPeekOpen(false)}>&times;</button>
-                        <h2 className="ls-modal-main-title">INSIDE A LESSON</h2>
-                        <div className="ls-flip-scene">
-                            <div className="ls-flip-card-inner">
-                                <div className="ls-flip-card-front">
-                                    <div className="ls-modal-cards-container">
-                                        <div className="ls-peek-card ls-card-orange">
-                                            <h3 className="ls-card-title">
-                                                <span>Is this <br /> a pebble problem <br /> or a <br /> meteor problem?</span>
-                                            </h3>
-                                            <div className="ls-card-svg-wrapper ls-pebble-wrapper">
-                                                <img src={PebbleMeteorSvg} alt="Pebble or Meteor" />
-                                                <span className="ls-or-overlay">OR</span>
+                <div 
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 lg:p-8"
+                    onClick={() => setIsSneakPeekOpen(false)}
+                >
+                    <div 
+                        className="bg-[#fff8f1] w-full max-w-[1250px] max-h-[90vh] rounded-[30px] lg:rounded-[60px] p-6 lg:p-14 relative shadow-2xl overflow-hidden flex flex-col"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button 
+                            className="absolute top-4 right-6 lg:top-8 lg:right-10 text-4xl lg:text-5xl text-[#1a2b4b] hover:scale-110 transition-transform leading-none z-50 select-none pb-2"
+                            onClick={() => setIsSneakPeekOpen(false)}
+                        >
+                            &times;
+                        </button>
+                        
+                        {/* Title */}
+                        <h2 className="text-center font-outfit font-bold text-2xl lg:text-4xl text-[#1a2b4b] mb-6 lg:mb-16 tracking-widest uppercase">
+                            INSIDE A LESSON
+                        </h2>
+
+                        {/* Responsive Container: Scrollable on Mobile, Stacked/Overlapping on Desktop */}
+                        <div className="flex-1 overflow-x-auto lg:overflow-visible no-scrollbar pb-4 lg:pb-0">
+                            <div className="flex flex-row items-center justify-start lg:justify-center min-w-min gap-6 lg:gap-0 px-4 lg:px-0 snap-x snap-mandatory">
+                                {/* Card 1 */}
+                                <div className="ls-flip-scene flex-shrink-0 w-[280px] lg:w-[360px] h-[380px] lg:h-[480px] snap-center">
+                                    <div className="ls-flip-card-inner">
+                                        <div className="ls-flip-card-front">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp2Svg} alt="Visual 1" className="w-[90%] h-auto object-contain" />
                                             </div>
-                                            <div className="ls-card-labels"><span>Pebble</span><span>Meteor</span></div>
                                         </div>
-                                        <div className="ls-peek-card ls-card-teal">
-                                            <h3 className="ls-card-title">
-                                                <span>Is your <br /> jar full <br /> of stars <br /> or rocks?</span>
-                                            </h3>
-                                            <div className="ls-card-svg-wrapper">
-                                                <img src={RocksStarsSvg} alt="Rocks or Stars" />
-                                                <span className="ls-or-overlay">OR</span>
-                                            </div>
-                                        </div>
-                                        <div className="ls-peek-card ls-card-green">
-                                            <h3 className="ls-card-title"><span>Star Breathing</span></h3>
-                                            <div className="ls-card-svg-wrapper ls-star-wrapper">
-                                                <img src={StarBreathSvg} alt="Star Breath" />
+                                        <div className="ls-flip-card-back">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp1Svg} alt="Detail 1" className="ls-back-illustration" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="ls-flip-card-back">
-                                    <img src={InsideALesson2Svg} alt="Inside a Lesson Details" className="ls-back-illustration" />
+
+                                {/* Card 2 */}
+                                <div className="ls-flip-scene flex-shrink-0 w-[280px] lg:w-[360px] h-[380px] lg:h-[480px] lg:-ml-12 snap-center">
+                                    <div className="ls-flip-card-inner">
+                                        <div className="ls-flip-card-front">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp4Svg} alt="Visual 2" className="w-[90%] h-auto object-contain" />
+                                            </div>
+                                        </div>
+                                        <div className="ls-flip-card-back">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp3Svg} alt="Detail 2" className="ls-back-illustration-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 3 */}
+                                <div className="ls-flip-scene flex-shrink-0 w-[280px] lg:w-[360px] h-[380px] lg:h-[480px] lg:-ml-12 snap-center">
+                                    <div className="ls-flip-card-inner">
+                                        <div className="ls-flip-card-front">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp6Svg} alt="Visual 3" className="w-[90%] h-auto object-contain" />
+                                            </div>
+                                        </div>
+                                        <div className="ls-flip-card-back">
+                                            <div className="w-full h-full flex justify-center items-center">
+                                                <img src={PopUp5Svg} alt="Detail 3" className="ls-back-illustration-2" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Mobile Swipe Hint */}
+                        <div className="lg:hidden text-center text-[#1a2b4b]/40 text-xs mt-2 uppercase font-bold tracking-widest animate-pulse">
+                            &larr; Swipe to explore &rarr;
                         </div>
                     </div>
                 </div>
@@ -540,6 +642,7 @@ const InnerStarsPage = () => {
                 type={snackbar.type}
                 onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
+
         </div>
     );
 };

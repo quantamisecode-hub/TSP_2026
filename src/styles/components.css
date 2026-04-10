@@ -387,6 +387,7 @@
     border-radius: 12px;
     font-family: var(--font-heading);
     font-size: 1.1rem;
+    font-weight: 800;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(103, 58, 183, 0.3);

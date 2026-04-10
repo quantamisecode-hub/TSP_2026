@@ -70,12 +70,12 @@ const Header = () => {
                                 className="btn-join font-bold w-full flex items-center justify-center gap-2 group mx-auto"
                                 onClick={(e) => { e.preventDefault(); setMobileBookNowOpen(!mobileBookNowOpen); }}
                             >
-                                Book now
+                                Book Now
                                 <span className={`inline-block w-2 h-2 border-r-2 border-b-2 border-white mb-1 transition-transform ${mobileBookNowOpen ? '-rotate-[135deg]' : 'rotate-45'}`}></span>
                             </button>
                             <div className={`dropdown-menu mx-auto ${mobileBookNowOpen ? 'mobile-open' : ''}`}>
-                                <a href="#" className="dropdown-item inner-stars-btn w-full text-center" onClick={openInnerStarsCalendly}>Inner Stars</a>
-                                <a href="#" className="dropdown-item learning-stars-btn w-full text-center" onClick={openLearningStarsCalendly}>Learning Stars</a>
+                                <Link to="/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Inner Stars</Link>
+                                <Link to="/learning-stars#assessment-section" className="dropdown-item learning-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Learning Stars</Link>
                             </div>
                         </li>
                     </ul>
@@ -83,11 +83,11 @@ const Header = () => {
 
                 <div className="cta-container nav-item-dropdown group relative z-[100]">
                     <a className="btn-join font-bold text-white no-underline flex items-center gap-2 cursor-pointer">
-                        Book now
+                        Book Now
                     </a>
                     <div className="dropdown-menu !left-1/2 !-translate-x-1/2 opacity-0 invisible group-hover:!opacity-100 group-hover:!visible group-hover:!-translate-y-1 transition-all duration-300 mt-4">
-                        <a href="#" className="dropdown-item inner-stars-btn" onClick={openInnerStarsCalendly}>Inner Stars</a>
-                        <a href="#" className="dropdown-item learning-stars-btn" onClick={openLearningStarsCalendly}>Learning Stars</a>
+                        <Link to="/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
+                        <Link to="/learning-stars#assessment-section" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
                     </div>
                 </div>
             </div>
