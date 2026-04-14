@@ -106,7 +106,7 @@ const StoryPage = () => {
             <section className="story-section" data-aos="fade-up">
                 <div className="inner-world-card">
                     <div className="inner-world-image">
-                        <img src={InnerWorld} alt="Learning the layers of their inner world" className="inner-world-svg" />
+                        <img src={InnerWorld} alt="Illustration representing a child’s inner world and the life skills that support resilience, mindset, and everyday learning" className="inner-world-svg" />
                     </div>
                     <div className="inner-world-text">
                         <h3>Children learn about the world around them.</h3>

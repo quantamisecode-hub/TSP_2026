@@ -11,7 +11,7 @@ const ProgramCTA = () => {
                 {/* 🌊 Background Wave */}
                 <img
                     src={WaveImg}
-                    alt="Transition Wave"
+                    alt="Learning that goes beyond the classroom banner representing life skills that support children beyond academics"
                     className="footer-wave-bg"
                 />
 
@@ -30,10 +30,10 @@ const ProgramCTA = () => {
                         />
                         {/* 🎭 SVG-native gradient mask — fixed to viewport coords */}
                         <linearGradient id="progFadeGrad" gradientUnits="userSpaceOnUse" x1="0" x2="1621.97" y1="0" y2="0">
-                            <stop offset="0"        stopColor="white" stopOpacity="0" />
-                            <stop offset="97"       stopColor="white" stopOpacity="1" />
-                            <stop offset="1524"     stopColor="white" stopOpacity="1" />
-                            <stop offset="1621.97"  stopColor="white" stopOpacity="0" />
+                            <stop offset="0" stopColor="white" stopOpacity="0" />
+                            <stop offset="97" stopColor="white" stopOpacity="1" />
+                            <stop offset="1524" stopColor="white" stopOpacity="1" />
+                            <stop offset="1621.97" stopColor="white" stopOpacity="0" />
                         </linearGradient>
                         <mask id="progTextFade" maskUnits="userSpaceOnUse">
                             <rect x="0" y="0" width="1621.97" height="456.18" fill="url(#progFadeGrad)" />

@@ -10,7 +10,7 @@ const Hero = () => {
                     alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
                     className="w-full h-auto object-contain drop-shadow-lg"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchPriority="high"
                 />
             </div>
         </section>

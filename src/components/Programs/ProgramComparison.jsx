@@ -11,7 +11,7 @@ const ProgramComparison = () => {
             <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center my-8 md:my-12 px-4" data-aos="zoom-in">
                 <img
                     src={PuzzleImg}
-                    alt="Inner Stars vs Learning Stars Comparison"
+                    alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
                     className="w-full h-auto mb-2"
                 />
                 <svg viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full text-gray-400 opacity-60">

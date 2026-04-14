@@ -5,8 +5,25 @@ import Slide2 from '../../assets/images/Homepage/Both Matter_2.svg';
 import Slide3 from '../../assets/images/Homepage/Both Matter_3.svg';
 import Slide4 from '../../assets/images/Homepage/Both Matter_4.svg';
 
-// Array of slides
-const slides = [Slide1, Slide2, Slide3, Slide4];
+// Array of slides with descriptive alt text for SEO
+const slides = [
+    { 
+        src: Slide1, 
+        alt: "Graphic showing exam preparation and life skills both matter in children’s education" 
+    },
+    { 
+        src: Slide2, 
+        alt: "Graphic showing academic learning and understanding a child’s inner world both matter in education" 
+    },
+    { 
+        src: Slide3, 
+        alt: "Graphic showing practical life safety and emotional resilience both matter in children’s learning" 
+    },
+    { 
+        src: Slide4, 
+        alt: "Graphic showing academic learning and real-life decision making both matter in children’s education" 
+    }
+];
 
 const ScaleSection = () => {
     const [ref, isVisible] = useScrollAnimation(0.2);
@@ -42,8 +59,8 @@ const ScaleSection = () => {
                             {/* Seesaw Animation applied to the active image */}
                             <div className="flex-grow flex items-end justify-center w-full mb-0 pb-0 relative z-0">
                                 <img
-                                    src={slide}
-                                    alt={`Graphic showing that academic learning and life skills both matter in children’s education`}
+                                    src={slide.src}
+                                    alt={slide.alt}
                                     className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[0.75rem] md:mb-[1.25rem]' : index === 1 ? 'mb-[0.4rem] md:mb-[0.6rem]' : index === 3 ? 'mb-[-0.5rem] md:mb-[-1rem]' : ''} ${index === currentIndex ? 'animate-seesaw' : ''}`}
                                     style={{ maxHeight: '450px' }}
                                 />

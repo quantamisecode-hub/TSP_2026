@@ -21,7 +21,7 @@ const DifferenceSection = () => {
                         </p>
                         <img
                             src={Puzzle}
-                            alt="Psychology & Education Puzzle"
+                            alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
                             className="w-full max-w-[600px] object-contain"
                         />
                     </div>

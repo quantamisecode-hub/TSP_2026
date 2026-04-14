@@ -251,7 +251,7 @@ const InnerStarsPage = () => {
                 <div className="inner-stars-card" data-aos="fade-up">
                     <div className="card-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
                         <div className="card-image w-full lg:w-[55%] flex justify-center lg:justify-start" data-aos="fade-right" data-aos-delay="200">
-                            <img src={BoxSvg} alt="Illustration of The Starry Path box representing practical tools for children’s life skills, mindset, and resilience" className="box-svg-asset" />
+                            <img src={BoxSvg} alt="The Starry Path box illustration representing practical tools for children’s life skills, mindset, and resilience" className="box-svg-asset" />
                         </div>
                         <div className="card-text w-full lg:w-[45%] text-center lg:text-left" data-aos="fade-left" data-aos-delay="400">
                             <h1 className="is-title tracking-widest">INNER STARS</h1>
@@ -329,7 +329,7 @@ const InnerStarsPage = () => {
                                         key={index}
                                         className={`col-start-1 row-start-1 flex items-center justify-center lg:justify-end transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
                                     >
-                                        <img src={slide.image} alt="Why Strengths Matter" className="w-full max-w-[320px] md:max-w-[450px] h-full object-contain" />
+                                        <img src={slide.image} alt="Inner Stars section explaining why life skills, resilience, and healthy habits matter for children during the primary school years" className="w-full max-w-[320px] md:max-w-[450px] h-full object-contain" />
                                     </div>
                                 ))}
                             </div>
@@ -385,7 +385,7 @@ const InnerStarsPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1200px] mx-auto" data-aos="fade-up" data-aos-delay="200">
                         {/* 6 learning cards code here... (truncating for brevity in thought, but full in CodeContent) */}
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-14.97%', top: '-21.43%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-14.97%', top: '-21.43%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-start text-white pt-8 pl-10">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-1">NOTICE & NAME</h3>
                                 <p className="text-xs sm:text-sm">Emotions to build</p>
@@ -393,7 +393,7 @@ const InnerStarsPage = () => {
                             </div>
                         </div>
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-123.8%', top: '-21.43%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-123.8%', top: '-21.43%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-center text-white w-[65%]">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-2">TAKE BRAVE STEPS</h3>
                                 <p className="text-xs sm:text-sm">and try new things</p>
@@ -401,7 +401,7 @@ const InnerStarsPage = () => {
                             </div>
                         </div>
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-232.63%', top: '-21.43%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-232.63%', top: '-21.43%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-start text-white pt-8 pl-6">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-1">KEEP GOING</h3>
                                 <p className="text-xs sm:text-sm">with effort and focus</p>
@@ -409,7 +409,7 @@ const InnerStarsPage = () => {
                             </div>
                         </div>
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-14.97%', top: '-137.31%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-14.97%', top: '-137.31%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-center text-white pl-[35%]">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-1">SHOW CARE,</h3>
                                 <p className="text-xs sm:text-sm">empathy, & compassion</p>
@@ -417,7 +417,7 @@ const InnerStarsPage = () => {
                             </div>
                         </div>
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-123.8%', top: '-137.31%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-123.8%', top: '-137.31%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-center text-white w-2/3">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-2">LOOK FOR THE GOOD</h3>
                                 <p className="text-xs sm:text-sm">and practise thankfulness</p>
@@ -425,7 +425,7 @@ const InnerStarsPage = () => {
                             </div>
                         </div>
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group shadow-sm">
-                            <img src={WhatChildrenLearnSvg} alt="" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-232.63%', top: '-137.31%' }} />
+                            <img src={WhatChildrenLearnSvg} alt="Life skills lesson cards showing children learning to notice thoughts, take brave steps, keep going, look for the good, and make wise choices" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-232.63%', top: '-137.31%' }} />
                             <div className="absolute inset-0 p-6 flex flex-col items-start justify-start text-white pt-8 pl-10">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight mb-1">MAKE CHOICES</h3>
                                 <p className="text-xs sm:text-sm">that match their values</p>
@@ -445,7 +445,7 @@ const InnerStarsPage = () => {
                     <div className="w-full max-w-[1280px] mx-auto relative group" data-aos="fade-up">
                         <picture>
                             <source media="(max-width: 768px)" srcSet={InsideALessonMobileSvg} />
-                            <img src={InsideALessonSvg} alt="Sneak Peek" className="inside-lesson-img w-full h-auto origin-top" />
+                            <img src={InsideALessonSvg} alt="Illustration showing what children learn in an Inner Stars lesson, including life skills, resilience, mindset, and positive habits" className="inside-lesson-img w-full h-auto origin-top" />
                         </picture>
                         <a onClick={(e) => { e.preventDefault(); setIsSneakPeekOpen(true); }} className="sneak-peek-btn absolute cursor-pointer" style={{ top: '18%', left: '70.3%', transform: 'translate(-50%, -50%)' }}>
                             Sneak Peek
