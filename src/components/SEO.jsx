@@ -42,6 +42,22 @@ const SEO = ({ title, description, keywords, schema }) => {
       twitterDescription.setAttribute('content', description);
     }
 
+    // Handle Canonical Tag
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    const currentUrl = window.location.origin + window.location.pathname;
+    canonical.setAttribute('href', currentUrl);
+
+    // Handle hreflang alternate (x-default)
+    let altHreflang = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    if (altHreflang) {
+      altHreflang.setAttribute('href', currentUrl);
+    }
+
     // Handle Schema injection
     if (schema) {
       const existingScript = document.getElementById('json-ld-schema');

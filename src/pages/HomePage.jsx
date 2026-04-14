@@ -67,6 +67,18 @@ const HomePage = () => {
         },
         "description": "Providing Inner Stars mindset programs and Learning Stars literacy support for children aged 5-12 in Point Cook, Victoria.",
         "parentOrganization": { "@id": "https://thestarrypath.com.au/#organization" }
+      }, {
+        "@type": "Organization",
+        "@id": "https://thestarrypath.com.au/#organization",
+        "name": "The Starry Path",
+        "url": "https://thestarrypath.com.au/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thestarrypath.com.au/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "The Starry Path offers children’s programs in Point Cook for ages 5–12, including life skills, mindset, and resilience through Inner Stars and literacy support through Learning Stars."
       }
     ]
   };
