@@ -578,6 +578,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .ls-icon-strip img {
@@ -590,6 +591,7 @@
     max-width: none;
     object-fit: contain;
     z-index: 30;
+    pointer-events: none;
 }
 
 .ls-orange-panel {
@@ -1070,6 +1072,9 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 4rem;
+    position: relative;
+    z-index: 40;
+    pointer-events: auto;
 }
 
 @media (max-width: 1024px) {
@@ -1082,6 +1087,9 @@
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 41;
+    pointer-events: auto;
 }
 
 .ls-dot-active {

@@ -38,6 +38,8 @@ const LearningStarsPage = () => {
     const [insideSlide, setInsideSlide] = useState(0);
     const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
     const [isLoading, setIsLoading] = useState(false);
+    const researchTimerRef = useRef(null);
+    const insideTimerRef = useRef(null);
 
     useEffect(() => {
         const handleHashScroll = () => {
@@ -57,24 +59,6 @@ const LearningStarsPage = () => {
 
         handleHashScroll();
     }, [location]);
-
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
-        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % researchSlides.length);
-        }, 6000);
-
-        const insideTimer = setInterval(() => {
-            setInsideSlide((prev) => (prev + 1) % 2);
-        }, 4000);
-
-        return () => {
-            clearInterval(timer);
-            clearInterval(insideTimer);
-        };
-    }, []);
 
     const handleAssessmentSubmit = (e) => {
         e.preventDefault();
@@ -233,6 +217,49 @@ const LearningStarsPage = () => {
             headingStyle: "ls-research-heading-navy"
         }
     ];
+
+    const startResearchAutoplay = () => {
+        if (researchTimerRef.current) {
+            clearInterval(researchTimerRef.current);
+        }
+
+        researchTimerRef.current = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % researchSlides.length);
+        }, 6000);
+    };
+
+    const startInsideAutoplay = () => {
+        if (insideTimerRef.current) {
+            clearInterval(insideTimerRef.current);
+        }
+
+        insideTimerRef.current = setInterval(() => {
+            setInsideSlide((prev) => (prev + 1) % 2);
+        }, 4000);
+    };
+
+    const handleResearchDotClick = (index) => {
+        setCurrentSlide(index);
+        startResearchAutoplay();
+    };
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+        startResearchAutoplay();
+        startInsideAutoplay();
+
+        return () => {
+            if (researchTimerRef.current) {
+                clearInterval(researchTimerRef.current);
+            }
+
+            if (insideTimerRef.current) {
+                clearInterval(insideTimerRef.current);
+            }
+        };
+    }, []);
 
     const seoLinks = [
         { label: "Programs", to: "/programs" },
@@ -549,7 +576,7 @@ const LearningStarsPage = () => {
                         {researchSlides.map((_, index) => (
                             <button
                                 key={index}
-                                onClick={() => setCurrentSlide(index)}
+                                onClick={() => handleResearchDotClick(index)}
                                 className={`ls-dot w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'ls-dot-active w-10 bg-[#FFCC00]' : 'bg-white/30 hover:bg-white/50'}`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
