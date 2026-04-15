@@ -463,7 +463,7 @@ const InnerStarsPage = () => {
                         </div>
                         <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1050px] mx-auto gap-12 lg:gap-16">
                             <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
-                                <img src={InnerStarsDifferentSvg} alt="Different" className="w-[90%] max-w-[450px] mix-blend-screen scale-110 lg:scale-125 lg:origin-right" />
+                                <img src={InnerStarsDifferentSvg} alt="Different" className="w-[90%] max-w-[450px]  scale-110 lg:scale-125 lg:origin-right" />
                             </div>
                             <div className="w-full lg:w-1/2 flex flex-col justify-center">
                                 <h3 className="text-[var(--color-hot-pink)] font-bold text-xl lg:text-2xl mb-6">INNER STARS BUILDS:</h3>
