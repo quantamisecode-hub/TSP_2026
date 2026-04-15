@@ -440,7 +440,7 @@ const InnerStarsPage = () => {
             <section className="inside-a-lesson-section is-standard-section-py">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
-                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textTransform: 'none' }}>Sneak Peek</h2>
+                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textTransform: 'none' }}>INSIDE A LESSON</h2>
                     </div>
                     <div className="w-full max-w-[1280px] mx-auto relative group" data-aos="fade-up">
                         <picture>

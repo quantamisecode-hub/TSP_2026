@@ -350,8 +350,8 @@
 }
 
 .advisor-left-text-group p strong {
-    color: var(--color-text);
-    font-weight: 800;
+    color: var(--color-grey-text);
+    font-weight: 700;
 }
 
 .advisor-logo-row {

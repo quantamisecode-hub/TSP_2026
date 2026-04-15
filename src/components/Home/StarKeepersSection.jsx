@@ -8,7 +8,7 @@ const StarKeepersSection = () => {
 
                 {/* Left: Umbrella Image Container */}
                 <div className="relative flex-1 flex flex-col items-center md:items-center justify-center" data-aos="fade-right">
-                    <div className="bg-transparent rounded-[40px] p-6 pb-0 w-full max-w-[500px] relative z-10 flex flex-col items-center">
+                    <div className="bg-transparent rounded-[40px] p-6 pb-16 w-full max-w-[500px] relative z-10 flex flex-col items-center">
                         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 647.9 623.69" className="w-full h-auto">
                             <defs>
                                 <style>{`
