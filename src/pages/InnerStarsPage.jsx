@@ -533,7 +533,7 @@ const InnerStarsPage = () => {
                                     <li>Two inner strengths<br /> at a time</li>
                                     <li>Immersive, hands on,<br /> and fun</li>
                                     <li>Ideal for school holiday<br /> learning</li>
-                                    <li>Coming soon</li>
+                                    <li>*Coming soon</li>
                                 </ul>
                             </div>
                         </div>
