@@ -28,6 +28,58 @@
     color: white !important;
 }
 
+/* Breadcrumbs for Learning Stars */
+.breadcrumbs.breadcrumbs-learning-stars {
+    background-color: var(--color-dark-navy);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.breadcrumbs.breadcrumbs-learning-stars .breadcrumb-link,
+.breadcrumbs.breadcrumbs-learning-stars .breadcrumb-separator,
+.breadcrumbs.breadcrumbs-learning-stars .breadcrumb-current {
+    color: #E2E8F0 !important;
+}
+
+.breadcrumbs.breadcrumbs-learning-stars .breadcrumb-link {
+    opacity: 0.8;
+}
+
+.breadcrumbs.breadcrumbs-learning-stars .breadcrumb-link:hover {
+    color: var(--color-yellow-gold) !important;
+    opacity: 1;
+}
+
+/* Footer for Learning Stars */
+.footer.footer-learning-stars {
+    background-color: var(--color-dark-navy);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer.footer-learning-stars .footer-acknowledgment {
+    color: #E2E8F0 !important;
+    opacity: 0.85;
+}
+
+.footer.footer-learning-stars .social-icon {
+    background-color: var(--color-yellow-gold) !important;
+    color: var(--color-dark-navy) !important;
+}
+
+.footer.footer-learning-stars .social-icon:hover {
+    background-color: white !important;
+    transform: scale(1.1);
+}
+
+/* Explore Section for Learning Stars */
+.explore-section.explore-learning-stars {
+    background-color: var(--color-dark-navy) !important;
+}
+
+.explore-section.explore-learning-stars .footer-wave-bg {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
 /* Hero Section Styles - Structural Size matches Inner Stars */
 .learning-stars-hero-section {
     max-width: 1280px;

@@ -4,6 +4,7 @@ import SEO from './SEO';
 
 const Breadcrumbs = () => {
     const location = useLocation();
+    const isLearningStars = location.pathname.includes('/learning-stars');
     const pathnames = location.pathname.split('/').filter((x) => x);
 
     // Don't show breadcrumbs on the homepage
@@ -59,7 +60,7 @@ const Breadcrumbs = () => {
     };
 
     return (
-        <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <nav className={`breadcrumbs ${isLearningStars ? 'breadcrumbs-learning-stars' : ''}`} aria-label="Breadcrumb">
             <SEO schema={schema} />
             <div className="breadcrumbs-container">
                 <ol className="breadcrumbs-list">

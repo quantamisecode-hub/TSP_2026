@@ -7,7 +7,7 @@ const Header = () => {
     const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
     const [mobileBookNowOpen, setMobileBookNowOpen] = useState(false);
     const location = useLocation();
-    const isLearningStars = location.pathname === '/learning-stars';
+    const isLearningStars = location.pathname.includes('/learning-stars');
 
     const openInnerStarsCalendly = (e) => {
         e.preventDefault();

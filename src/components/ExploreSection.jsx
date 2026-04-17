@@ -5,13 +5,13 @@ import "../styles/components.css";
 
 const ExploreSection = () => {
     const location = useLocation();
-    const isStoryPage = location.pathname === '/story';
-    const isLearningStarsPage = location.pathname === '/learning-stars';
-    const isInnerStarsPage = location.pathname === '/inner-stars';
+    const isStoryPage = location.pathname.includes('/story');
+    const isLearningStarsPage = location.pathname.includes('/learning-stars');
+    const isInnerStarsPage = location.pathname.includes('/inner-stars');
     const isProgramsPage = location.pathname === '/programs';
 
     return (
-        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'bg-[var(--color-dark-navy)]' : ''}`} style={isProgramsPage ? { marginTop: '0', marginBottom: '3rem' } : {}}>
+        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'explore-learning-stars' : ''}`} style={isProgramsPage ? { marginTop: '0', marginBottom: '3rem' } : {}}>
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}
@@ -70,7 +70,7 @@ const ExploreSection = () => {
                             ) : isLearningStarsPage ? (
                                 [...Array(12)].map((_, i) => (
                                     <React.Fragment key={i}>
-                                        <tspan fill="var(--color-navy)">Learning Stars builds literacy{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="#ffffff">Learning Stars builds literacy{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                     </React.Fragment>
                                 ))
                             ) : isInnerStarsPage ? (
