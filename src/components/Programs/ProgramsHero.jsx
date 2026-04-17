@@ -8,19 +8,21 @@ const ProgramsHero = () => {
                 <div className="flex-1 w-full flex justify-center lg:justify-start" data-aos="fade-right">
                     <img src={BoxImg} alt="Inner Strengths Box" className="w-full max-w-[320px] lg:max-w-[420px] h-auto drop-shadow-xl" />
                 </div>
-                <div className="flex-1 text-center lg:text-left" data-aos="fade-left">
-                    <h1 className="text-[var(--color-yellow-gold)] text-3xl md:text-5xl lg:text-7xl mb-6 font-[var(--font-heading)] font-bold uppercase tracking-widest">
-                        Programs
-                    </h1>
-                    <h2 className="font-[var(--font-heading)] text-white text-xl md:text-2xl lg:text-3xl mb-2 leading-tight tracking-wide font-bold opacity-90">
-                        INNER STRENGTHS THAT GUIDE.
-                    </h2>
-                    <h3 className="font-[var(--font-heading)] text-[var(--color-teal)] text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 leading-tight tracking-wide font-bold">
-                        LITERACY SKILLS THAT EMPOWER.
-                    </h3>
-                    <p className="text-lg md:text-xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg mx-auto lg:mx-0 opacity-95 text-center md:text-left">
-                        At The Starry Path, children grow inner strengths through the <span className="font-bold">Inner Stars Program</span> and receive targeted literacy support through <span className="font-bold">Learning Stars</span>.
-                    </p>
+                <div className="flex-1 flex justify-center lg:justify-start" data-aos="fade-left">
+                    <div className="max-w-fit">
+                        <h1 className="sr-only">
+                            Programs
+                        </h1>
+                        <h2 className="font-[var(--font-heading)] text-[var(--color-yellow-gold)] text-2xl md:text-5xl lg:text-6xl mb-4 leading-tight lg:leading-tight tracking-tight font-bold text-center lg:text-left uppercase">
+                            INNER STRENGTHS <br className="md:hidden" /> THAT GUIDE.
+                        </h2>
+                        <h3 className="font-[var(--font-heading)] text-[var(--color-teal)] text-2xl md:text-5xl lg:text-6xl mb-6 md:mb-8 leading-tight lg:leading-tight tracking-tight font-bold text-center lg:text-left uppercase">
+                            LITERACY SKILLS <br className="md:hidden" /> THAT EMPOWER.
+                        </h3>
+                        <p className="text-lg md:text-2xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg lg:mx-0 opacity-95 text-center lg:text-left">
+                            At The Starry Path, children grow <br className="md:hidden" /> inner strengths through the <span className="font-bold">Inner Stars Program</span> and receive targeted literacy support through <span className="font-bold">Learning Stars</span>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

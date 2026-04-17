@@ -18,7 +18,7 @@ const StarSection = () => {
 
                 {/* Right: Text Content */}
                 <div className="w-full md:w-1/2 text-left" data-aos="fade-left">
-                    <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-6 uppercase leading-tight font-bold text-center md:text-left">
+                    <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] pl-5 md:pl-0 text-2xl md:text-4xl mb-6 uppercase leading-tight font-bold text-center md:text-left">
                         WHAT WILL YOUR CHILD LEARN? (AGES 5-12)
                     </h2>
                     <div className="flex justify-center md:justify-start">

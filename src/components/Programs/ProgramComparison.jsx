@@ -21,11 +21,15 @@ const ProgramComparison = () => {
 
             <div className="w-full max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
                 <div className="py-6">
-                    <h5 className="text-xl font-[var(--font-heading)] text-[var(--color-dark-navy)] uppercase font-bold">SOME CHILDREN BENEFIT FROM BOTH</h5>
+                    <h5 className="text-xl font-[var(--font-heading)] text-[var(--color-dark-navy)] uppercase font-bold">SOME CHILDREN BENEFIT <br className='md:hidden' /> FROM BOTH</h5>
                 </div>
-                {["Inner Stars develops life skills and habits of mind.", "Learning Stars strengthens essential literacy skills.", "Together, they support learning at school and beyond."].map((text) => (
-                    <div key={text} className="py-6">
-                        <p className="text-lg font-[var(--font-body)]" style={{ color: 'var(--color-grey-text)' }}>{text}</p>
+                {[
+                    <span key="inner">Inner Stars develops life skills and <br className='md:hidden' /> habits of mind.</span>,
+                    <span key="learning">Learning Stars strengthens <br className='md:hidden' /> essential literacy skills.</span>,
+                    <span key="together">Together, they support learning <br className='md:hidden' /> at school and beyond.</span>
+                ].map((content, index) => (
+                    <div key={index} className="py-6">
+                        <p className="text-lg font-[var(--font-body)]" style={{ color: 'var(--color-grey-text)' }}>{content}</p>
                     </div>
                 ))}
             </div>

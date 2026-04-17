@@ -39,6 +39,7 @@ const ResourcesPage = () => {
     };
 
     const defaultColors = ["#E91E63", "#56469c", "#fcb116", "#b0d236", "#f04c23", "#45bfb4"];
+    const hoverColors = ["#fcb116", "#b0d236", "#f04c23", "#56469c", "#ed2480", "#45bfb4"];
 
     return (
         <div className="resources-page pt-32 pb-24">
@@ -73,6 +74,7 @@ const ResourcesPage = () => {
                             <div
                                 key={post.id}
                                 className="resource-card group"
+                                style={{ "--card-hover-color": hoverColors[index % hoverColors.length] }}
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                                 onClick={() => handlePostClick(post)}

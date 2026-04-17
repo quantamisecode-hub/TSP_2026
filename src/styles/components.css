@@ -677,7 +677,7 @@
     }
 
     .footer-acknowledgment {
-        text-align: center;
+        text-align: justify;
     }
 
     .programs-page {
@@ -726,7 +726,7 @@
     justify-content: center;
     padding: 2rem;
     border-radius: 2rem;
-    text-align: left;
+    text-align: center;
 }
 
 /* Breadcrumbs Styles */
@@ -790,7 +790,7 @@
     .breadcrumbs-container {
         padding: 0 1.5rem;
     }
-    
+
     .breadcrumb-item {
         font-size: 0.85rem;
     }

@@ -86,8 +86,8 @@
     font-size: 2rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
-    text-transform: uppercase;
-    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    line-height: 0.9 !important;
     margin-bottom: 1.5rem !important;
     text-align: center !important;
 }
@@ -168,6 +168,10 @@
     .is-title {
         font-size: 2.1rem;
     }
+
+    .is-diff-title {
+        font-size: 1.7rem !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -240,9 +244,9 @@
     }
 
     .why-title {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
         margin-bottom: 1.5rem !important;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     .why-questions {
@@ -302,7 +306,13 @@
 /* Why Matter Section Styles */
 .why-title {
     color: var(--color-dark-navy);
-    text-align: left !important;
+    text-align: center !important;
+}
+
+@media (min-width: 1024px) {
+    .why-title {
+        text-align: left !important;
+    }
 }
 
 .why-cta-btn {
@@ -508,8 +518,7 @@
     font-size: clamp(1.1rem, 3.2vw, 1.35rem);
     /* Increased size */
     line-height: 1.3;
-    text-align: justify;
-    /* Justified as requested */
+    text-align: left;
 }
 
 .ls-join-card-disclaimer {
@@ -693,6 +702,13 @@
     color: #ecaa19;
     /* Yellow gold */
     display: block;
+    text-align: left !important;
+}
+
+@media (min-width: 768px) {
+    .is-diff-title {
+        text-align: center !important;
+    }
 }
 
 .sneak-peek-btn {

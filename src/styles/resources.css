@@ -98,7 +98,7 @@
 }
 
 .resource-card:hover .card-title {
-    color: var(--color-hot-pink);
+    color: var(--card-hover-color, var(--color-hot-pink));
 }
 
 .card-excerpt {

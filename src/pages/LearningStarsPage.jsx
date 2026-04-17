@@ -146,7 +146,7 @@ const LearningStarsPage = () => {
 
     const researchSlides = [
         {
-            leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
+            leftHeading: "RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
                     <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
@@ -173,7 +173,7 @@ const LearningStarsPage = () => {
             headingStyle: "ls-research-heading-white"
         },
         {
-            leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
+            leftHeading: "RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
                     <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
@@ -197,7 +197,7 @@ const LearningStarsPage = () => {
             headingStyle: "ls-research-heading-turquoise"
         },
         {
-            leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
+            leftHeading: "RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
                     <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
@@ -365,16 +365,14 @@ const LearningStarsPage = () => {
 
                         <div className="why-literacy-content space-y-6 text-lg lg:text-xl font-light opacity-90 leading-relaxed">
                             <p>
-                                In Australia, 1 in 4 children fall behind in reading
-                                and writing by the middle years of primary school.
+                                In Australia, 1 in 4 children fall behind <br className='md:hidden' /> in reading and writing by the middle years of primary school.
                             </p>
                             <p>Without support, small gaps grow.</p>
                             <p>
-                                Reading and writing do not develop on their own.
-                                They need clear and intentional teaching.
+                                Reading and writing do not develop <br className='md:hidden' /> on their own. They need clear <br className='md:hidden' /> and intentional teaching.
                             </p>
                             <p className="font-semibold text-[var(--color-yellow-gold)] pt-4">
-                                Concerned about your child's reading and spelling?
+                                Concerned about your child's reading <br className='md:hidden' /> and spelling?
                             </p>
                         </div>
 
@@ -485,7 +483,7 @@ const LearningStarsPage = () => {
                     <div className="ls-intentional-cards">
                         <div className="ls-intentional-card" data-aos="fade-up">
                             <div className="ls-intentional-card-top">
-                                <svg viewBox="120 240 380 200">
+                                <svg viewBox="200 240 220 200">
                                     <path fill="#adc716" d="M366.8,319.31v-5.82h-21.75v30.78c0,1.83-3.62,4.75-5.36,4.75h-36.3v30.78c0,1.44-3.36,4.44-4.75,4.44h-36.91v31.86h112.73v-88.37s.43-.46.46-.46h11.49v96.64c0,1.11-2.6,3.57-3.76,3.9-42.94.35-86.1.47-129.05-.06-2-.97-3.67-2.77-3.81-5.07.96-14.41-1.29-30.51-.02-44.73.16-1.84,1.17-3.92,2.86-4.8.28-.14,2.37-.86,2.51-.86h35.99v-30.17c0-1.7,3.06-5.05,4.75-5.05h36.91v-30.48c0-1.71,3.31-5.05,5.05-5.05h28.95v-5.82l19.9,11.79-19.9,11.79Z" />
                                 </svg>
                             </div>
@@ -496,7 +494,7 @@ const LearningStarsPage = () => {
 
                         <div className="ls-intentional-card" data-aos="fade-up" data-aos-delay="100">
                             <div className="ls-intentional-card-top">
-                                <svg viewBox="640 240 300 180">
+                                <svg viewBox="690 240 140 180">
                                     <path fill="#33c5b5" d="M766.65,369.65c13.96,6.53,18.5,25.45,9.69,38.01l13.58,13.82c2.06,5.52-3.19,9.57-8.11,5.85-2.03-1.53-11.64-12.19-12.51-12.36-9.76,6.17-22.61,5.78-31.59-1.67-.95-.79-2.97-3.36-3.89-3.54h-45.2c-5.82-.85-10.64-5.03-12.28-10.66-.83-30.92-.71-62.17-.06-93.11,1.56-5.83,6.63-10.24,12.65-10.92h64.6c7.13.78,12.24,6.41,13.06,13.42l.06,61.15ZM756.59,366.47v-57.98c0-1.59-3.6-4.09-5.32-3.73h-60.08c-2.9.04-5.21,2.04-5.33,5,.18,28.88-.29,57.83.23,86.68.3,1.56,2.62,3.61,4.14,3.61h38.91c-3.95-13.61,4.02-27.89,17.26-32.31.81-.27,4.27-1.28,4.85-1.28h5.33ZM752.97,376.58c-21.85,1.59-18.2,36.58,4.66,32.44,19.76-3.58,16.55-33.99-4.66-32.44Z" />
                                     <path fill="#33c5b5" d="M696.32,332.12c-2.81-2.81-1.34-7.68,2.62-8.29h44.57c5.71,1.18,5.12,8.72-.33,9.7-14.08-.92-29.71,1.22-43.6.01-1.29-.11-2.33-.49-3.26-1.42Z" />
                                     <path fill="#33c5b5" d="M696.32,351.17c-2.81-2.81-1.34-7.68,2.62-8.29h44.57c5.71,1.18,5.12,8.72-.33,9.7-14.08-.92-29.71,1.22-43.6.01-1.29-.11-2.33-.49-3.26-1.42Z" />
@@ -510,7 +508,7 @@ const LearningStarsPage = () => {
 
                         <div className="ls-intentional-card" data-aos="fade-up" data-aos-delay="200">
                             <div className="ls-intentional-card-top">
-                                <svg viewBox="1060 280 180 140">
+                                <svg viewBox="1060 280 160 140">
                                     <path fill="#e44c17" d="M1076.96,292.46c.38-.37.96-.6,1.46-.79,46.38-.63,93.01-.6,139.39-.01,1.93.79,2.67,2.63,2.63,4.66v132.16c-.07,1.69-.8,3.45-2.42,4.17h-139.81c-1.04-.46-1.76-1.33-2.08-2.43-.61-45.28-.42-90.78-.09-136.08.26-.53.51-1.27.92-1.68ZM1216.61,295.11h-136.99v11.1h136.99v-11.1ZM1216.61,310.02h-136.99v118.95h136.99v-118.95Z" />
                                     <path fill="#e44c17" d="M1119.15,401.58c-3.22-12.46,3.6-27.22,15.03-33.01.85-.43,4.57-1.49,4.74-1.68.13-.14.05-.48-.22-.72-1.12-1-2.67-1.56-3.93-2.93-12.92-14.04,1.54-36.11,19.59-29.65,12.22,4.38,15.8,20.19,7.09,29.65-1.26,1.37-2.82,1.92-3.93,2.93-.27.24-.35.58-.22.72.17.18,3.89,1.25,4.74,1.68,11.42,5.78,18.16,20.56,15.03,33.01h-57.92Z" />
                                     <path fill="#e44c17" d="M1094.08,298.31c5.25-1.19,4.34,6.32.08,4.98-2.36-.74-2.37-4.46-.08-4.98Z" />

@@ -71,8 +71,8 @@ const StoryPage = () => {
                 </picture>
                 <div className="story-hero-text">
                     <h1 className="sr-only">Our Story</h1>
-                    <h2 className="text-xl md:text-2xl font-bold mb-4">A child's inner world is made of many&nbsp;pieces </h2>
-                    <p>Understanding how those pieces work together builds habits of mind and&nbsp;character </p>
+                    <h2 className="text-xl md:text-2xl font-bold mb-4">A child's inner world is made of <br className='md:hidden' /> many&nbsp;pieces. </h2>
+                    <p>Understanding how those pieces work together builds habits of mind and&nbsp;character. </p>
                 </div>
             </section>
 
@@ -80,7 +80,7 @@ const StoryPage = () => {
             <section className="story-section" data-aos="fade-up">
                 <div className="path-section-container">
                     <div className="path-text-content">
-                        <h2>WHY THE STARRY{" "}<br className="hidden md:block" />PATH EXISTS?</h2>
+                        <h2 className=''>WHY THE STARRY{" "}<br className="hidden md:block" />PATH EXISTS?</h2>
                         <p className="path-highlight">
                             Education builds knowledge and&nbsp;skills. <br />
                             <strong>Habits of mind help children use them{" "}
@@ -109,11 +109,10 @@ const StoryPage = () => {
                         <img src={InnerWorld} alt="Illustration representing a child’s inner world and the life skills that support resilience, mindset, and everyday learning" className="inner-world-svg" />
                     </div>
                     <div className="inner-world-text">
-                        <h3>Children learn about the world around them.</h3>
+                        <h3>Children learn about <br className='md:hidden' /> the world around them.</h3>
                         <p className="sub-text">Planets, oceans, and gravity.</p>
 
-                        <h3>But rarely do they learn about the world
-                            <br />
+                        <h3>But rarely do they <br className='md:hidden' /> learn about the world
                             within them.</h3>
                         <p className="sub-text">
                             Understanding their inner world should be<br />
@@ -132,7 +131,7 @@ const StoryPage = () => {
                         <h2>OUR PURPOSE</h2>
                     </div>
                     <div className="purpose-label-right">
-                        <p>To build the habits of mind that shape character for life.</p>
+                        <p>To build the habits of mind <br className='md:hidden' /> that shape character for life.</p>
                     </div>
                 </div>
             </section>
@@ -166,8 +165,8 @@ const StoryPage = () => {
                     <div className="advisor-left">
                         <div className="advisor-left-text-group">
                             <h2 className="advisor-title">OUR ADVISOR</h2>
+                            <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing,</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based&nbsp;therapy.</p>
 
-                            <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing.</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based&nbsp;therapy.</p>
                         </div>
 
                         <div className="advisor-logo-row">
@@ -198,7 +197,7 @@ const StoryPage = () => {
                     <img src={Guiding} alt="Guiding Background" className="guiding-bg" />
                     <div className="guiding-content">
                         <h2 data-aos="fade-right" data-aos-delay="200">GUIDING CHILDREN'S{" "}<br className="hidden md:block" />GROWTH</h2>
-                        <h3 data-aos="fade-right" data-aos-delay="400">The Starry Path is named{" "}<br className="hidden md:block" />for what it aims to&nbsp;nurture:</h3>
+                        <h3 data-aos="fade-right" data-aos-delay="400">The Starry Path is named{" "}<br className="" />for what it aims to&nbsp;nurture:</h3>
                         <p data-aos="fade-up" data-aos-delay="600">Awareness and resilience in how children{" "}<br className="hidden md:block" />think, learn, and&nbsp;live.</p>
                         <p data-aos="fade-up" data-aos-delay="800">Their inner strengths become guiding{" "}<br className="hidden md:block" />lights for learning and for life beyond{" "}<br className="hidden md:block" />the&nbsp;classroom.</p>
                     </div>

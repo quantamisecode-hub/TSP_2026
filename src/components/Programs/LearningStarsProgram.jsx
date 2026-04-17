@@ -15,26 +15,28 @@ const LearningStarsProgram = () => {
                 <div className="flex-1 flex flex-col items-center text-center" data-aos="zoom-in">
                     <img src={LearningStarsImg} alt="Learning Stars" className="w-[240px] md:w-[360px] h-auto mb-4 drop-shadow-xl" />
                 </div>
-                <div className="flex-[1.5] text-center md:text-left" data-aos="fade-left">
-                    <h3 className="text-xl md:text-3xl font-[var(--font-heading)] text-[var(--color-dark-navy)] mb-6 leading-tight font-bold">
-                        Structured literacy support that builds: Reading, Spelling, Writing, and Strong Academic Foundations.
-                    </h3>
-                    <p className="text-lg md:text-xl font-[var(--font-body)] mb-4" style={{ color: 'var(--color-grey-text)' }}>Children strengthen these skills through:</p>
-                    <ul className="mb-8 space-y-3 inline-block text-left mx-auto md:mx-0">
-                        {["Explicit Teaching", "Step-by-step Practice", "Structured Literacy Tools", "Mastery over time"].map((item) => (
-                            <li key={item} className="text-lg md:text-xl font-[var(--font-body)] flex items-start gap-3" style={{ color: 'var(--color-grey-text)' }}>
-                                <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: 'var(--color-grey-text)' }}>•</span>
-                                <span className="leading-tight">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                    <p className="text-lg md:text-xl font-[var(--font-body)] mb-8 opacity-90 mx-auto md:mx-0 max-w-lg" style={{ color: 'var(--color-grey-text)' }}>
-                        <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> Children who find reading, spelling, writing or school work harder than expected.
-                    </p>
-                    <div className="flex justify-center md:justify-start">
-                        <Link to="/programs/learning-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
-                            Learn More
-                        </Link>
+                <div className="flex-[1.5] flex justify-center md:justify-start" data-aos="fade-left">
+                    <div className="w-fit">
+                        <h3 className="text-xl md:text-3xl font-[var(--font-heading)] text-[var(--color-dark-navy)] mb-6 leading-tight font-bold text-left">
+                            Structured literacy support that builds: Reading, Spelling, Writing, and Strong Academic Foundations.
+                        </h3>
+                        <p className="text-lg md:text-xl font-[var(--font-body)] mb-4 text-left" style={{ color: 'var(--color-grey-text)' }}>Children strengthen these skills through:</p>
+                        <ul className="mb-8 space-y-3 text-left">
+                            {["Explicit Teaching", "Step-by-step Practice", "Structured Literacy Tools", "Mastery over time"].map((item) => (
+                                <li key={item} className="text-lg md:text-xl font-[var(--font-body)] flex items-start gap-3" style={{ color: 'var(--color-grey-text)' }}>
+                                    <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: 'var(--color-grey-text)' }}>•</span>
+                                    <span className="leading-tight">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="text-lg md:text-xl font-[var(--font-body)] mb-8 opacity-90 max-w-lg text-left" style={{ color: 'var(--color-grey-text)' }}>
+                            <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> Children who find reading, spelling, writing or school work harder than expected.
+                        </p>
+                        <div className="flex justify-start">
+                            <Link to="/programs/learning-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
+                                Learn More
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

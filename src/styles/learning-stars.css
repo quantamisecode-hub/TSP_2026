@@ -280,7 +280,13 @@
         align-items: center;
     }
 
+    .why-literacy-title {
+        text-align: center !important;
+    }
 
+    .why-literacy-content p {
+        text-align: center !important;
+    }
 }
 
 .why-literacy-content p {
@@ -760,14 +766,16 @@
         width: 100%;
         max-width: 300px;
         left: 0;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem auto;
         order: 1;
         display: flex;
+        align-items: center;
         justify-content: center;
+        align-self: center;
     }
 
     .ls-program-asset img {
-        transform: scale(1.1);
+        transform: scale(1.1) translateX(15%);
         transform-origin: center;
         width: 100%;
         height: auto;
@@ -845,7 +853,7 @@
     .ls-intentional-card-top svg {
         width: 100%;
         height: 100%;
-        max-width: 120px;
+        max-width: 180px;
     }
 
     .ls-intentional-card-bottom {
@@ -1013,8 +1021,12 @@
     }
 
     .ls-clarity-content {
-        text-align: center;
+        text-align: left;
     }
+
+    /* .ls-clarity-content h2 {
+        text-align: center !important;
+    } */
 
     .ls-clarity-content ul {
         display: inline-block;
@@ -1174,6 +1186,12 @@
 .ls-clarity-title {
     color: #FBB03B !important;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .ls-clarity-title {
+        text-align: left !important;
+    }
 }
 
 .ls-booking-title {

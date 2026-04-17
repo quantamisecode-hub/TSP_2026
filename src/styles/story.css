@@ -371,7 +371,7 @@
 }
 
 .advisor-logo-text {
-    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     padding-left: 1.5rem;
     display: flex;
     align-items: center;
@@ -685,7 +685,7 @@
     .path-text-content {
         padding: 0 0.5rem;
         /* Reduced from 1rem */
-        text-align: center;
+        text-align: left;
     }
 
     .path-image-content {
@@ -719,7 +719,7 @@
     }
 
     .inner-world-text h3 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .inner-world-text .sub-text {
@@ -807,7 +807,7 @@
     }
 
     .advisor-title,
-    .path-text-content h2,
+    /* .path-text-content h2, */
     .charvi-title,
     .guiding-content h2 {
         font-size: 1.8rem;
@@ -845,7 +845,7 @@
 
     .advisor-logo-text {
         border-left: none;
-        border-top: 1px solid #eee;
+        border-top: 2px solid #eee;
         padding-left: 0;
         padding-top: 1rem;
         /* Reduced from 1.5rem */

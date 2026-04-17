@@ -301,7 +301,7 @@ const InnerStarsPage = () => {
                     <div className="carousel-card bg-white rounded-[2rem] p-8 md:p-12 lg:p-16 h-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-24 relative overflow-hidden shadow-sm">
 
                         <div className="flex-1 order-2 lg:order-1 flex flex-col w-full h-full">
-                            <h2 className="why-title mb-6 md:mb-8 text-center lg:text-left">WHY INNER STRENGTHS MATTER</h2>
+                            <h2 className="why-title mb-6 md:mb-8 text-center lg:text-left">WHY INNER <br className='md:hidden' /> STRENGTHS MATTER</h2>
 
                             <div className="grid grid-cols-1 grid-rows-1">
                                 {slides.map((slide, index) => (
@@ -310,7 +310,7 @@ const InnerStarsPage = () => {
                                         className={`col-start-1 row-start-1 transition-all duration-1000 ${index === currentSlide ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-4 z-0 pointer-events-none'}`}
                                     >
                                         <div className="why-questions mb-6 md:mb-8 text-center lg:text-left">
-                                            <div className="text-[var(--color-grey-text)] text-lg md:text-xl lg:text-2xl leading-relaxed">
+                                            <div className="text-[var(--color-grey-text)] text-lg md:text-xl lg:text-2xl leading-tight">
                                                 <span
                                                     className={slide.isBoldSubtitle ? 'font-bold' : ''}
                                                     style={{ color: slide.subtitleColor || 'var(--color-grey-text)' }}
@@ -325,7 +325,7 @@ const InnerStarsPage = () => {
                                                     ))
                                                 ) : (
                                                     <span
-                                                        className={`font-bold ${slide.isBlockHighlight ? 'block mt-1' : 'ml-1'}`}
+                                                        className={`font-bold ${slide.isBlockHighlight ? 'block' : 'ml-1'}`}
                                                         style={{ color: slide.highlightColor }}
                                                     >
                                                         {slide.highlight}
@@ -379,8 +379,8 @@ const InnerStarsPage = () => {
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up">
                         <h2 className="is-section-title" style={{ textTransform: 'none' }}>Life Skills in Education</h2>
-                        <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12">
-                            Teaching life lessons and core human values for resilience and character development
+                        <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12 leading-[1.1]">
+                            Teaching life lessons and core is human values. for resilience and character development
                         </p>
                     </div>
 
@@ -483,22 +483,22 @@ const InnerStarsPage = () => {
             <section className="how-different-section is-standard-section-py">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div className="bg-[var(--color-dark-navy)] rounded-[2.5rem] lg:rounded-[4rem] px-8 py-10 lg:px-16 lg:py-16 flex flex-col shadow-lg" data-aos="fade-up">
-                        <div className="text-center mb-8 md:mb-12">
-                            <h2 className="is-diff-title">HOW INNER STARS IS DIFFERENT</h2>
+                        <div className="text-left md:text-center mb-8 md:mb-12">
+                            <h2 className="is-diff-title">HOW INNER STARS <br className='md:hidden' /> IS DIFFERENT</h2>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1050px] mx-auto gap-12 md:gap-16">
                             <div className="w-full md:w-[45%] flex justify-center md:justify-end">
                                 <img src={InnerStarsDifferentSvg} alt="Different" className="w-[90%] max-w-[450px]  scale-110 md:scale-125 md:origin-right" />
                             </div>
                             <div className="w-full md:w-1/2 flex flex-col justify-center">
-                                <h3 className="text-[var(--color-hot-pink)] font-bold text-xl md:text-2xl mb-6">INNER STARS BUILDS:</h3>
+                                <h3 className="text-[var(--color-hot-pink)] pl-4 md:pl-0 font-bold text-xl md:text-2xl mb-6">INNER STARS BUILDS:</h3>
                                 <ul className="space-y-4 mb-10 text-white">
                                     <li className="flex items-start"><span className="mr-4">•</span>Everyday language children use in real life</li>
                                     <li className="flex items-start"><span className="mr-4">•</span>Simple visuals they can remember</li>
                                     <li className="flex items-start"><span className="mr-4">•</span>Habits of mind they can practise anywhere</li>
                                     <li className="flex items-start"><span className="mr-4">•</span>Character and mindset taught through stories, movement, and reflection</li>
                                 </ul>
-                                <p className="text-[#ecaa19] text-base lg:text-[1.1rem]">This isn't a lesson about wellbeing. It's a way of growing from the inside out.</p>
+                                <p className="text-[#ecaa19] text-base pl-4 md:pl-0 lg:text-[1.1rem]">This isn't a lesson about wellbeing. It's a way of growing from the inside out.</p>
                             </div>
                         </div>
                     </div>
