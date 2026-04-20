@@ -100,7 +100,7 @@
 /* Big Ideas Section */
 .big-ideas-section {
     position: relative;
-    padding: 4rem 0;
+    padding: 0 !important;
 }
 
 .big-ideas-image {

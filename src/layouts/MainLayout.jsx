@@ -46,7 +46,7 @@ const MainLayout = ({ children }) => {
             */}
 
             <Header />
-            <main className="content min-h-screen">
+            <main className="content">
                 <Breadcrumbs />
                 {children}
             </main>

@@ -9,9 +9,13 @@ const ExploreSection = () => {
     const isLearningStarsPage = location.pathname.includes('/learning-stars');
     const isInnerStarsPage = location.pathname.includes('/inner-stars');
     const isProgramsPage = location.pathname === '/programs';
+    const isResourcesPage = location.pathname.includes('/resources');
+    const isBlogPostPage = location.pathname.includes('/resources/blogs-post/');
 
     return (
-        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'explore-learning-stars' : ''}`} style={isProgramsPage ? { marginTop: '0', marginBottom: '3rem' } : {}}>
+        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'explore-learning-stars' : ''}`} 
+                 style={isProgramsPage ? { marginTop: '0', marginBottom: '3rem' } : 
+                        isResourcesPage && !isBlogPostPage ? { marginTop: '-4rem' } : {}}>
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}

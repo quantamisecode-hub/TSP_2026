@@ -469,7 +469,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Intentional Teaching Approach Section */}
-            <section className="ls-intentional-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
+            <section className="ls-intentional-section pt-12 lg:pt-16 pb-2 lg:pb-4 bg-[var(--color-dark-navy)]">
                 <div className="ls-intentional-wrapper px-6">
                     <h2 className="ls-intentional-title mb-0" data-aos="fade-up">
                         AN INTENTIONAL <br className="md:hidden" />
@@ -535,7 +535,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Research Section with Carousel */}
-            <section className="ls-research-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
+            <section className="ls-research-section pt-2 lg:pt-4 pb-12 lg:pb-16 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1300px] mx-auto px-8">
                     <div className="ls-research-carousel-wrapper">
                         {researchSlides.map((slide, index) => (

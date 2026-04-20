@@ -43,23 +43,23 @@ const ResourcesPage = () => {
     const hoverColors = ["#fcb116", "#b0d236", "#f04c23", "#56469c", "#ed2480", "#45bfb4"];
 
     return (
-        <div className="resources-page pb-24">
+        <div className="resources-page pb-0">
             <SEO
                 title="Resources & Blog | The Starry Path"
                 description="Explore our latest articles, guides and insights on building resilience, mindset and emotional intelligence for children."
             />
 
-            <div className="resources-hero container mx-auto px-4 mb-2" data-aos="fade-up">
+            <div className="resources-hero container mx-auto px-4 mb-0" data-aos="fade-up">
                 <div className="flex flex-col items-center text-center">
-                    <div className="puzzle-hero flex justify-center mb-12 w-full">
-                        <img src={ResourcesBanner} alt="The Starry Path Banner" className="max-w-6xl w-full h-auto" />
+                    <div className="puzzle-hero flex justify-center mb-2 w-full pl-10 md:pl-64">
+                        <img src={ResourcesBanner} alt="The Starry Path Banner" className="w-[125%] md:w-full max-w-none md:max-w-7xl h-auto mx-auto transform translate-x-[2%]" />
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-navy)] tracking-[0.1em] mb-4">Resources to Support Your Child</h1>
                     <div className="w-24 h-1.5 bg-[var(--color-hot-pink)] rounded-full mb-8"></div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 mb-24">
+            <div className="container mx-auto px-4 pt-4 mb-4">
                 {loading ? (
                     <div className="flex justify-center items-center py-32">
                         <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-[var(--color-hot-pink)]"></div>

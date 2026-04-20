@@ -572,6 +572,7 @@
     display: flex;
     justify-content: center;
     margin-top: -190px;
+    margin-bottom: -120px;
 }
 
 .ls-intentional-asset {
@@ -808,7 +809,7 @@
         /* Removed negative margin to fix overlap */
         padding-top: 2rem;
         /* Added padding for clean spacing */
-        padding-bottom: 3rem;
+        padding-bottom: 0.1rem !important;
         /* Added bottom margin to separate from research section */
     }
 
@@ -1134,7 +1135,7 @@
 @media (max-width: 768px) {
 
     .ls-research-section {
-        padding-top: 4rem !important;
+        padding-top: 0.5rem !important;
         padding-bottom: 2rem !important;
     }
 

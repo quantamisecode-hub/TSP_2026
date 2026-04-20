@@ -56,7 +56,7 @@ const StrengthsSection = () => {
     ];
 
     return (
-        <section className="py-12 md:py-20 px-8 max-w-[1200px] mx-auto text-center">
+        <section className="pt-12 md:pt-20 pb-4 md:pb-6 px-8 max-w-[1200px] mx-auto text-center">
             <h2 className="text-2xl md:text-4xl text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight font-bold" data-aos="fade-up">
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
@@ -97,7 +97,7 @@ const StrengthsSection = () => {
                 ))}
             </div>
 
-            <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in" data-aos-offset="100">
+            <div className="flex justify-center mb-2 md:mb-4 px-4" data-aos="zoom-in" data-aos-offset="100">
                 <Link to="/programs/inner-stars" className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     BUILD LIFELONG STRENGTHS
                 </Link>
