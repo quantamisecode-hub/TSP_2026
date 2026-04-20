@@ -464,7 +464,7 @@ const InnerStarsPage = () => {
             {/* Inside a Lesson Section */}
             <section className="inside-a-lesson-section is-standard-section-py">
                 <div className="max-w-[1280px] mx-auto px-8">
-                    <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
+                    <div data-aos="fade-up" className="text-center mb-6 lg:mb-10">
                         <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textTransform: 'none' }}>INSIDE A LESSON</h2>
                     </div>
                     <div className="w-full max-w-[1280px] mx-auto relative group" data-aos="fade-up">
@@ -483,7 +483,7 @@ const InnerStarsPage = () => {
             <section className="how-different-section is-standard-section-py">
                 <div className="max-w-[1280px] mx-auto px-8">
                     <div className="bg-[var(--color-dark-navy)] rounded-[2.5rem] lg:rounded-[4rem] px-8 py-10 lg:px-16 lg:py-16 flex flex-col shadow-lg" data-aos="fade-up">
-                        <div className="text-left md:text-center mb-8 md:mb-12">
+                        <div className="text-center mb-8 md:mb-12">
                             <h2 className="is-diff-title">HOW INNER STARS <br className='md:hidden' /> IS DIFFERENT</h2>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1050px] mx-auto gap-12 md:gap-16">

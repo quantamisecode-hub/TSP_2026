@@ -535,7 +535,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Research Section with Carousel */}
-            <section className="ls-research-section pt-2 lg:pt-4 pb-12 lg:pb-16 bg-[var(--color-dark-navy)]">
+            <section className="ls-research-section pt-8 lg:pt-12 pb-12 lg:pb-16 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1300px] mx-auto px-8">
                     <div className="ls-research-carousel-wrapper">
                         {researchSlides.map((slide, index) => (
@@ -592,7 +592,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Why I Created Learning Stars Section */}
-            <section className="ls-creator-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
+            <section className="ls-creator-section pt-12 pb-6 lg:py-16 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1200px] mx-auto px-8">
                     <div className="ls-creator-container relative bg-[#FCF8F2] rounded-[30px] flex flex-col lg:flex-row shadow-lg">
                         {/* Left Side: Image */}
@@ -625,7 +625,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Difference From Tutoring Section */}
-            <section className="ls-difference-section pt-4 pb-12 lg:py-16 bg-[var(--color-dark-navy)] text-white overflow-hidden">
+            <section className="ls-difference-section pt-2 pb-12 lg:py-16 bg-[var(--color-dark-navy)] text-white overflow-hidden">
                 <div className="max-w-[1300px] mx-auto px-8">
                     <h2 className="ls-difference-title" data-aos="fade-up">
                         HOW LEARNING STARS IS DIFFERENT <br className='hidden lg:block' /> FROM TUTORING

@@ -94,7 +94,7 @@
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    line-height: 0.9 !important;
+    line-height: 1.1 !important;
     margin-bottom: 1.5rem !important;
     text-align: center !important;
 }
@@ -635,11 +635,11 @@
     }
 
     .inside-lesson-img {
-        transform: scale(1.5) !important;
+        transform: scale(1.3) !important;
         transform-origin: top center !important;
         margin-top: -1rem !important;
-        margin-bottom: 3rem !important;
-        /* Push the next section away */
+        margin-bottom: 8rem !important;
+        /* Proper spacing to clear scaled element without excessive gap */
     }
 
     .sneak-peek-btn {

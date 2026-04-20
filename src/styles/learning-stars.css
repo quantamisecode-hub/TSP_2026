@@ -809,8 +809,8 @@
         /* Removed negative margin to fix overlap */
         padding-top: 2rem;
         /* Added padding for clean spacing */
-        padding-bottom: 0.1rem !important;
-        /* Added bottom margin to separate from research section */
+        padding-bottom: 4rem !important;
+        /* Increased bottom padding to separate from research section */
     }
 
     /* Standardized Headline Sizes for Mobile Consistency */
@@ -830,6 +830,7 @@
     .ls-faq-title {
         font-size: 1.7rem !important;
         line-height: 1.2 !important;
+        margin-top: 0.5rem !important;
         margin-bottom: 1.25rem !important;
         text-align: center !important;
     }
@@ -935,8 +936,8 @@
     .ls-research-container {
         flex-direction: column;
         height: auto;
-        gap: 2rem;
-        /* Balanced mobile gap */
+        gap: 3.5rem;
+        /* Increased mobile gap for better breathing room */
     }
 
     .ls-navy-panel,
@@ -1197,7 +1198,7 @@
 .ls-difference-title {
     color: #A3C610 !important;
     /* Lime green from image */
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     display: block;
     text-align: center;
