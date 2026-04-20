@@ -43,7 +43,7 @@ const ResourcesPage = () => {
     const hoverColors = ["#fcb116", "#b0d236", "#f04c23", "#56469c", "#ed2480", "#45bfb4"];
 
     return (
-        <div className="resources-page pt-32 pb-24">
+        <div className="resources-page pb-24">
             <SEO
                 title="Resources & Blog | The Starry Path"
                 description="Explore our latest articles, guides and insights on building resilience, mindset and emotional intelligence for children."
