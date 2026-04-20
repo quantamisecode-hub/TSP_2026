@@ -606,7 +606,7 @@
 
 @media (max-width: 768px) {
     .story-section {
-        padding: 1.8rem 1rem;
+        padding: 1rem 1rem;
         /* Updated to px-4 (1rem) as requested */
         overflow: hidden;
     }
@@ -616,7 +616,7 @@
     }
 
     .story-section.compact-section {
-        padding: 1.8rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .story-hero {
