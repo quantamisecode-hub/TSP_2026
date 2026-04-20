@@ -460,6 +460,7 @@ const InnerStarsPage = () => {
                     </div>
                 </div>
             </section>
+            <br className='hidden md:block' /><br className='hidden md:block' /><br className='hidden md:block' /><br className='hidden md:block' />
 
             {/* Inside a Lesson Section */}
             <section className="inside-a-lesson-section is-standard-section-py">
