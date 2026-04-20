@@ -41,7 +41,7 @@ const BookNowPage = () => {
                 ]}
                 schema={schema}
             />
-            
+
             <div className="max-w-[1000px] mx-auto text-center" data-aos="fade-up">
                 <h1 className="text-4xl md:text-6xl font-[var(--font-heading)] font-bold mb-8 text-[var(--color-dark-navy)]">
                     Book Now
