@@ -53,7 +53,7 @@ const ResourcesPage = () => {
                     <div className="puzzle-hero flex justify-center mb-12 w-full">
                         <img src={HomepageBanner} alt="The Starry Path Banner" className="max-w-6xl w-full h-auto" />
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-navy)] uppercase tracking-[0.2em] mb-4">RESOURCES</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-navy)] tracking-[0.1em] mb-4">Resources to Support Your Child</h1>
                     <div className="w-24 h-1.5 bg-[var(--color-hot-pink)] rounded-full mb-8"></div>
                 </div>
             </div>

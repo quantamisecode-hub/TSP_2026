@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 940.16 1224.32">
+  <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #00c7b4;
+      }
+
+      .st1 {
+        fill: #f30080;
+      }
+
+      .st2 {
+        fill: #573bb4;
+      }
+
+      .st3 {
+        fill: #003058;
+      }
+
+      .st4 {
+        fill: #f7a500;
+      }
+
+      .st5, .st6 {
+        fill: #fff7ef;
+      }
+
+      .st7 {
+        fill: #a5c700;
+      }
+
+      .st8 {
+        fill: #f63a00;
+      }
+
+      .st6 {
+        fill: #fff7ef;
+        stroke: #003058;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+
+      /* Puzzle Join Animation */
+      @keyframes puzzleJoin {
+        0% { opacity: 0; transform: translate(var(--dx, 0), var(--dy, 0)) scale(0.9); }
+        100% { opacity: 1; transform: translate(0, 0) scale(1); }
+      }
+      .p-piece { opacity: 0; animation: puzzleJoin 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .resilience { --dx: -150px; --dy: -100px; animation-delay: 1.7s; }
+      .courage { --dx: -150px; --dy: 0px; animation-delay: 1.9s; }
+      .perseverance { --dx: -150px; --dy: 100px; animation-delay: 2.1s; }
+      .habits { opacity: 0; animation: habitsPop 0.8s ease-out 2.7s forwards; transform-origin: center; }
+      .kindness { --dx: 150px; --dy: -100px; animation-delay: 1.8s; }
+      .gratitude { --dx: 150px; --dy: 0px; animation-delay: 2.0s; }
+      .integrity { --dx: 150px; --dy: 100px; animation-delay: 2.2s; }
+      @keyframes habitsPop {
+        0% { opacity: 0; transform: scale(0.5); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      .bg-fade { opacity: 0; animation: fadeIn 1.5s forwards 2.9s; }
+      @keyframes fadeIn { to { opacity: 1; } }
+    </style>
