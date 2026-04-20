@@ -55,7 +55,7 @@ const ResourcesPage = () => {
                         <img src={ResourcesBanner} alt="The Starry Path Banner" className="w-[125%] md:w-[110%] lg:w-full max-w-none md:max-w-5xl lg:max-w-7xl h-auto mx-auto transform translate-x-[2%]" />
                     </div>
                     <br className='hidden md:block' /><br className='hidden md:block' />
-                    <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-[var(--color-navy)] tracking-tight uppercase mb-4">Resources to Support <br className='block md:hidden' /> Your Child</h1>
+                    <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-[var(--color-navy)] uppercase programs-hero-title mb-4 tracking-tight text-center md:text-left">Resources to Support <br className='block md:hidden' /> Your Child</h1>
                     <div className="w-24 h-1.5 bg-[var(--color-hot-pink)] rounded-full mb-8"></div>
                 </div>
             </div>
