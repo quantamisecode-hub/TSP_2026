@@ -472,13 +472,13 @@ const LearningStarsPage = () => {
             <section className="ls-intentional-section pt-12 lg:pt-16 pb-2 lg:pb-4 bg-[var(--color-dark-navy)]">
                 <div className="ls-intentional-wrapper px-6">
                     <h2 className="ls-intentional-title mb-0" data-aos="fade-up">
-                        AN INTENTIONAL <br className="md:hidden" />
+                        AN INTENTIONAL <br className="xl:hidden" />
                         TEACHING APPROACH
                     </h2>
 
                     <div className="ls-intentional-info-box" data-aos="fade-up">
                         <p className="ls-intentional-info-text">
-                            Learning Stars is based on how children learn to read and write. Teaching is structured and responsive at each child's point of need.
+                            Learning Stars is based on how children learn to read and write. Teaching is structured <br className="xl:hidden" /> and responsive at each child's point of need.
                         </p>
                     </div>
 
