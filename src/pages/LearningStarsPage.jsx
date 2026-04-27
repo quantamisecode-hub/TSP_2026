@@ -157,9 +157,9 @@ const LearningStarsPage = () => {
                     </ul>
                 </>
             ),
-            rightHeading: <>LEARNING STARS <br className="hidden lg:block" /> HELPS CHILDREN:</>,
+            rightHeading: <>LEARNING STARS<br className="hidden lg:block" /><span className="lg:hidden"></span>HELPS CHILDREN:</>,
             rightContent: (
-                <div className="flex justify-center w-full">
+                <div className="flex justify-start w-full">
                     <ul className="ls-research-checklist text-white space-y-1.5 text-xl lg:text-2xl font-light text-left inline-block">
                         <li>• Hear sounds in words</li>
                         <li>• Work with sounds</li>
@@ -339,7 +339,7 @@ const LearningStarsPage = () => {
                     <div className="ls-hero-content flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-16">
                         <div className="ls-hero-text w-full lg:w-1/2 text-center lg:text-left lg:pl-24" data-aos="fade-right" data-aos-delay="200">
                             <h1 className="ls-title">LEARNING STARS</h1>
-                            <h2 className="ls-subtitle">Structured literacy support</h2>
+                            <h2 className="ls-subtitle">Structured Literacy Support</h2>
                             <p className="ls-description">
                                 Foundations for reading and writing{" "}<br className="hidden lg:block" />
                                 for school success
@@ -560,14 +560,14 @@ const LearningStarsPage = () => {
                                     </div>
 
                                     {/* Right Column (Transitions) */}
-                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-6 md:p-10 lg:p-14 lg:pl-32' : 'p-4 lg:p-6'} flex flex-col justify-center ${index === 0 ? 'items-center text-center' : 'items-start'} relative z-10 overflow-hidden`}>
+                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-6 md:p-10 lg:p-14 lg:pl-32' : 'p-4 lg:p-6'} flex flex-col justify-center ${index === 0 ? 'items-start text-left' : 'items-start'} relative z-10 overflow-hidden`}>
                                         {slide.rightHeading && (
-                                            <h2 className={`${slide.headingStyle} mb-8 ${index === 0 ? 'text-center ls-research-heading-reduced' : ''}`}>
+                                            <h2 className={`${slide.headingStyle} mb-8 ${index === 0 ? 'text-left ls-research-heading-reduced' : ''}`}>
                                                 {slide.rightHeading}
                                             </h2>
                                         )}
                                         {slide.rightContent && (
-                                            <div className={`w-full ${index === 0 ? 'lg:-translate-x-6' : ''}`}>
+                                            <div className={`w-full ${index === 0 ? '' : ''}`}>
                                                 {slide.rightContent}
                                             </div>
                                         )}
@@ -601,14 +601,14 @@ const LearningStarsPage = () => {
                         </div>
 
                         {/* Right Side: Text lines */}
-                        <div className="ls-creator-content py-8 pr-8 pl-0 lg:py-8 lg:pr-16 lg:pl-0 flex-1 flex flex-col justify-center w-full overflow-hidden">
+                        <div className="ls-creator-content py-8 pr-8 pl-0 lg:py-8 lg:pr-10 lg:pl-0 flex-1 flex flex-col justify-center w-full overflow-hidden">
                             <div className="border-b-2 border-gray-300 border-solid pb-0 w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">
                                 <h2 className="ls-creator-title">
                                     WHY I CREATED LEARNING STARS
                                 </h2>
                             </div>
 
-                            <div className="ls-creator-text-lines text-[#6B6B6B] font-body font-normal text-base lg:text-[1.1rem]">
+                            <div className="ls-creator-text-lines text-[#6B6B6B] font-body font-normal text-base lg:text-[1.05rem] xl:text-[1.1rem]">
                                 <p className="py-2.5 border-b-2 border-gray-300 border-solid w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">My path into literacy began early. I saw how explicit teaching helped</p>
                                 <p className="py-2.5 border-b-2 border-gray-300 border-solid w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">a close family member, and later worked as a reading specialist using</p>
                                 <p className="py-2.5 border-b-2 border-gray-300 border-solid w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">diagnostic, evidence based methods grounded in the Big Six of Literacy</p>
@@ -862,16 +862,6 @@ const LearningStarsPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Discovery Links */}
-            <div className="max-w-[1200px] mx-auto px-8 py-8 text-center border-t border-white/10">
-                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-white/60 text-sm uppercase tracking-widest font-bold">
-                    <Link to="/" className="hover:text-[var(--color-yellow-gold)] transition-colors">Homepage</Link>
-                    <Link to="/programs" className="hover:text-[var(--color-yellow-gold)] transition-colors">Programs</Link>
-                    <Link to="/programs/inner-stars" className="hover:text-[var(--color-yellow-gold)] transition-colors">Inner Stars</Link>
-                    <Link to="/book-now" className="hover:text-[var(--color-yellow-gold)] transition-colors text-[var(--color-yellow-gold)]">Book Now</Link>
-                </div>
-            </div>
 
             <Snackbar
                 show={snackbar.show}

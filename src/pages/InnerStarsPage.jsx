@@ -106,11 +106,13 @@ const InnerStarsPage = () => {
     const testimonials = [
         {
             text: "As a mum, I've been amazed by the positive impact Inner Stars has had. My child is learning to understand their feelings, and I've noticed they are better able to express themselves and calm down when upset. I feel so grateful to have found a program that nurtures both the heart and the mind.",
-            author: "— Mansi, parent of a 5 year old"
+            author: "— Mansi, parent of a 5 year old",
+            bgColor: "#b0d236" // Lime Green
         },
         {
             text: "Thank you for starting this initiative. My daughter likes to attend all sessions and is learning a lot about her big emotions in a fun and playful way. I am hopeful it would help her to deal with emotions and life gradually by following all strategies and frameworks to understand self and the world. I definitely recommend The Starry Path way to learn life skills to all the children to make them stronger and resilient.",
-            author: "— Shruti K, parent of a 5 year old"
+            author: "— Shruti K, parent of a 5 year old",
+            bgColor: "#fcb116" // Brand Yellow
         }
     ];
 
@@ -285,7 +287,7 @@ const InnerStarsPage = () => {
                         </div>
                         <div className="w-full md:w-[50%] text-center md:text-left" data-aos="fade-left" data-aos-delay="400">
                             <h1 className="is-title tracking-widest">INNER STARS</h1>
-                            <h2 className="is-subtitle" style={{ color: 'var(--color-teal)', textTransform: 'none', letterSpacing: 'normal' }}>Character building</h2>
+                            <h2 className="is-subtitle" style={{ color: 'var(--color-teal)', textTransform: 'none', letterSpacing: 'normal' }}>Character Building</h2>
                             <p className="is-description mt-4">
                                 Habits of minds for resilience<br className="hidden md:block" />
                                 and life skills for learning and life
@@ -637,7 +639,8 @@ const InnerStarsPage = () => {
                             {testimonials.map((testimonial, index) => (
                                 <div
                                     key={index}
-                                    className={`testimonial-card w-full z-10 bg-[#b0d236] rounded-[2rem] p-10 lg:p-20 flex flex-col items-center text-center overflow-hidden transition-all duration-700 ${index === activeTestimonial ? 'opacity-100 translate-x-0 relative' : 'opacity-0 translate-x-12 absolute pointer-events-none'}`}
+                                    className={`testimonial-card w-full z-10 rounded-[2rem] p-10 lg:p-20 flex flex-col items-center text-center overflow-hidden transition-all duration-700 ${index === activeTestimonial ? 'opacity-100 translate-x-0 relative' : 'opacity-0 translate-x-12 absolute pointer-events-none'}`}
+                                    style={{ backgroundColor: testimonial.bgColor }}
                                 >
                                     {/* Opening Quote */}
                                     <svg className="absolute -top-2 left-4 lg:top-4 lg:left-8 w-16 h-16 lg:w-24 lg:h-24 text-[#002147] opacity-10" viewBox="0 0 24 24" fill="currentColor">
@@ -662,7 +665,8 @@ const InnerStarsPage = () => {
                                     <button
                                         key={index}
                                         onClick={() => handleTestimonialDotClick(index)}
-                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeTestimonial ? 'bg-[#b0d236] w-8' : 'bg-white/30 hover:bg-white/50'}`}
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeTestimonial ? 'w-8' : 'bg-white/30 hover:bg-white/50'}`}
+                                        style={index === activeTestimonial ? { backgroundColor: testimonials[index].bgColor } : {}}
                                         aria-label={`Go to testimonial ${index + 1}`}
                                     />
                                 ))}
@@ -762,15 +766,6 @@ const InnerStarsPage = () => {
                 type={snackbar.type}
                 onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
-            {/* SEO Footer for links */}
-            <div className="is-seo-footer py-12 bg-white border-t border-gray-100">
-                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#002B49]/40 text-sm uppercase tracking-widest font-bold">
-                    <Link to="/" className="hover:text-[var(--color-hot-pink)] transition-colors">Homepage</Link>
-                    <Link to="/programs" className="hover:text-[var(--color-hot-pink)] transition-colors">Programs</Link>
-                    <Link to="/programs/learning-stars" className="hover:text-[var(--color-hot-pink)] transition-colors">Learning Stars</Link>
-                    <Link to="/book-now" className="hover:text-[var(--color-hot-pink)] transition-colors text-[var(--color-hot-pink)]">Book Now</Link>
-                </div>
-            </div>
             <HiddenNavigation links={seoLinks} />
         </div>
     );
