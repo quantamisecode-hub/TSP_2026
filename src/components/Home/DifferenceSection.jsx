@@ -39,14 +39,14 @@ const DifferenceSection = () => {
                         <h3 className="font-[var(--font-heading)] text-2xl uppercase mb-6 font-bold text-center md:text-left">
                             THE FOCUS IS ON
                         </h3>
-                        <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#122f52', wordSpacing: '-0.02em', hyphens: 'auto', wordBreak: 'break-word', textJustify: 'inter-word' }}>
+                        <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#122f52' }}>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
                                 <span className="leading-tight">Understanding self and thinking frameworks</span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
-                                <span className="leading-tight">Evidence-aligned tools that turn research into everyday practice</span>
+                                <span className="leading-tight">Evidence-aligned tools that turn research into <span style={{ whiteSpace: 'nowrap' }}>everyday</span> practice</span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>

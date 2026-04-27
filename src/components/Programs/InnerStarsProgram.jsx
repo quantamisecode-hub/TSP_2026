@@ -7,7 +7,7 @@ const InnerStarsProgram = () => {
         <>
             <div className="max-w-[1280px] mx-4 md:mx-10 xl:mx-auto mt-12 mb-8" data-aos="fade-up">
                 <div className="w-full py-4 md:py-6 bg-[var(--color-orange)] text-white text-lg md:text-3xl font-[var(--font-heading)] text-center uppercase rounded-xl md:rounded-2xl shadow-2xl px-8 flex items-center justify-center font-bold">
-                    Life skills for every child. <br className='md:hidden' /> Ages 5-12.
+                    Life skills for every child <br className='md:hidden' /> Ages 5-12
                 </div>
             </div>
 

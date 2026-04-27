@@ -49,22 +49,34 @@ const ScaleSection = () => {
 
             <div className="relative w-full max-w-[900px] mx-auto min-h-[250px] md:min-h-[500px] flex flex-col items-center justify-end mb-4" data-aos="zoom-in">
                 {/* Slides - Animated SVGs Container */}
-                <div className="relative w-full flex-grow flex items-end justify-center mb-[-2.25rem] md:mb-[-4rem] overflow-visible">
+                <div className="relative w-full flex-grow flex items-end justify-center overflow-visible">
                     {/* Map SVG slides */}
                     {slides.map((slide, index) => (
                         <div
                             key={index}
                             className={`absolute inset-0 flex flex-col items-center justify-end transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                         >
-                            {/* Seesaw Animation applied to the active image */}
-                            <div className="flex-grow flex items-end justify-center w-full mb-0 pb-0 relative z-0">
+                            {/* Seesaw Animation applied to the image inside a translating wrapper */}
+                            <div
+                                className="flex-grow flex items-end justify-center w-full mb-0 pb-0 relative z-0"
+                                style={{
+                                    transform: `translateY(${index === 0 ? '9.5%' :
+                                            index === 1 ? '12.3%' :
+                                                index === 2 ? '14.4%' :
+                                                    '17.9%'
+                                        })`
+                                }}
+                            >
                                 <img
                                     src={slide.src}
                                     alt={slide.alt}
-                                    className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[0.65rem] md:mb-[1.25rem]' : index === 1 ? 'mb-[0.20rem] md:mb-[0.6rem]' : index === 2 ? 'mb-[-0.25rem] md:mb-[0.6rem]' : index === 3 ? 'mb-[-0.80rem] md:mb-[-1rem]' : ''} ${index === currentIndex ? 'animate-seesaw' : ''}`}
-                                    style={{ maxHeight: '450px' }}
+                                    className={`w-full h-auto object-contain align-bottom ${index === currentIndex ? 'animate-seesaw' : ''}`}
+                                    style={{
+                                        maxHeight: '450px',
+                                        transformOrigin: index === 0 ? '50.16% 86.60%' : index === 1 ? '50.34% 83.70%' : index === 2 ? '50.97% 81.66%' : '48.11% 78.17%'
+                                    }}
                                 />
-                            </div>
+                            </div=
                         </div>
                     ))}
                 </div>
