@@ -352,6 +352,7 @@
 .advisor-left-text-group p strong {
     color: var(--color-grey-text);
     font-weight: 700;
+    font-size: 1.0rem;
 }
 
 .advisor-logo-row {
@@ -609,6 +610,10 @@
         padding: 1rem 1rem;
         /* Updated to px-4 (1rem) as requested */
         overflow: hidden;
+    }
+
+    .nowrap-mobile {
+        white-space: nowrap;
     }
 
     .story-section.pt-0 {

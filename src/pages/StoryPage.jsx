@@ -165,7 +165,7 @@ const StoryPage = () => {
                     <div className="advisor-left">
                         <div className="advisor-left-text-group">
                             <h2 className="advisor-title">OUR ADVISOR</h2>
-                            <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing,</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based&nbsp;therapy.</p>
+                            <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and <span className="nowrap-mobile">people-pleasing,</span></strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based&nbsp;therapy.</p>
 
                         </div>
 

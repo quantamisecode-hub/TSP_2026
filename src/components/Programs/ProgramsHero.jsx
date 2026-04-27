@@ -18,10 +18,10 @@ const ProgramsHero = () => {
                             Programs
                         </h1>
                         <h2 className="programs-hero-title text-[var(--color-yellow-gold)] mb-4 tracking-tight text-center md:text-left">
-                            INNER STRENGTHS <br className="xl:hidden" /> THAT GUIDE.
+                            INNER STRENGTHS <br /> THAT GUIDE
                         </h2>
                         <h3 className="programs-hero-title text-[var(--color-teal)] mb-6 md:mb-8 tracking-tight text-center md:text-left">
-                            LITERACY SKILLS <br className="xl:hidden" /> THAT EMPOWER.
+                            LITERACY SKILLS <br /> THAT EMPOWER
                         </h3>
                         <p className="text-md md:text-lg lg:text-xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg lg:mx-0 opacity-95 text-center md:text-left">
                             At The Starry Path, children grow <br className="xl:hidden" /> inner strengths through the <span className="font-bold">Inner Stars Program</span> and receive targeted literacy support through <span className="font-bold">Learning Stars</span>.
